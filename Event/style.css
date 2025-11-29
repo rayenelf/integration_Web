@@ -1,0 +1,167 @@
+/* ----------------- */
+/*      GLOBAL       */
+/* ----------------- */
+body {
+    background: linear-gradient(
+    to bottom,
+    #E8D5D5 0%,
+    #ffffff 40%,
+    #E8D5D5 100%
+);
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ----------------- */
+/*   NAVIGATION      */
+/* ----------------- */
+.main-nav {
+    float: left;
+}
+
+.main-nav a {
+    text-decoration: none;
+    margin-left: 12px;
+    color: #b84c12;
+}
+
+
+/* ----------------- */
+/*   IMAGES          */
+/* ----------------- */
+
+#i1 {
+    width: 40%;
+    border-radius: 30px;
+}
+
+#i2 {
+    width: 60%;
+}
+
+/* ----------------- */
+/*   FLEX CONTAINER  */
+/* ----------------- */
+.flex-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+/* ----------------- */
+/*   OLD BOX MODEL   */
+/* (pas utilisé mais gardé au cas où) */
+/* ----------------- */
+div.exemple {
+    display: -webkit-box;
+    display: -moz-box;
+
+    height: 400px;
+    width: 300px;
+
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+}
+
+/* ----------------- */
+/*      CARTE        */
+/* ----------------- */
+.carte {
+    width: 700px;
+    height: 600px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+
+    background-image: url("ddd.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 4px 10px rgba(62, 62, 62, 0.3);
+}
+.carte .btn {
+  position: absolute;
+    bottom: 40px;      /* toujours à 20px du bas de la carte */
+    left: 50%;         /* centre horizontalement */
+    transform: translateX(-50%);
+
+    padding: 7px 2px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #6c4637;
+    color: white;
+}
+.carte .ann {
+  position: absolute;
+    bottom: 5px;      /* toujours à 20px du bas de la carte */
+    left: 50%;         /* centre horizontalement */
+    transform: translateX(-50%);
+
+    padding: 7px 2px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #686867;
+    color: rgb(29, 27, 27);
+}
+
+
+
+
+/* Titre fixé en haut */
+.carte h1 {
+    color: rgb(110, 53, 9);
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+}
+
+/* Texte */
+.carte p {
+    color: rgb(76, 31, 11);
+}
+
+/* Inputs */
+.carte input {
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: none;
+    width: 80%;
+}
+
+/* Bloc interne */
+.carte .content {
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px;
+    border-radius: 10px;
+}
+.pp {
+    font-weight: bold;   /* Gras */
+    font-style: italic;  /* Italique */
+    color: rgb(76, 31, 11); /* même couleur que ton p */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 1,5rem;
+}
+
+
+
