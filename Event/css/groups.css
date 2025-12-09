@@ -6,3 +6,5 @@
 .sidebar .main-nav .nn>div:last-child{font-size:15px;font-weight:600;color:#5a2a1a}
 .sidebar .main-nav .nn:hover{background-color:#6c4637;color:#fff;border-color:#6c4637}
 .sidebar .main-nav .nn.active{background-color:#6c4637;border-color:#6c4637;color:#fff}
+/* Layout override: align groups content to top-left */
+.groups-page{max-width:none;margin:0 !important}
