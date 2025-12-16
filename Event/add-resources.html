@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="css/add-resources.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#b84c12',
+                        'primary-hover': '#9a3d0e',
+                        sidebar: '#EBCDC3',
+                        'sidebar-hover': '#cea69a',
+                        'sidebar-dark': '#6c4637',
+                        'bg-light': '#D9D9D9',
+                        'bg-card': '#0A8CB2',
+                        'bg-beige': '#CEA69A',
+                        'bg-brown': '#B5927E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#DABCB2] font-sans">
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div>
+            <img src="icons/logo.svg" alt="Logo" class="sidebar-logo">
+        </div>
+        <ul>
+            <li><a href="#">
+                <span class="text-2xl">🏠</span>
+                <span class="text-xs">Groups</span>
+            </a></li>
+            <li><a href="#">
+                <span class="text-2xl">📅</span>
+                <span class="text-xs">event</span>
+            </a></li>
+            <li><a href="#">
+                <span class="text-2xl">📁</span>
+                <span class="text-xs">Portfolio</span>
+            </a></li>
+            <li><a href="#">
+                <span class="text-2xl">💼</span>
+                <span class="text-xs">offers</span>
+            </a></li>
+            <li><a href="#">
+                <span class="text-2xl">🤝</span>
+                <span class="text-xs">Covoiturage</span>
+            </a></li>
+            <li><a href="resources.html" class="active">
+                <span class="text-2xl">📚</span>
+                <span class="text-xs">Ressources</span>
+            </a></li>
+        </ul>
+        <button class="logout-btn">log out</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content ml-20 p-8 lg:p-12">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <div class="header-left">
+                <h1 class="text-3xl font-bold text-gray-800">ADD NEW RESSOURCES</h1>
+            </div>
+            <div class="header-right flex gap-4">
+                <button class="notification-btn w-10 h-10 rounded-full border-none bg-sidebar cursor-pointer text-lg transition-all duration-300 hover:scale-110">🔔</button>
+                <button class="profile-btn w-10 h-10 rounded-full border-none bg-sidebar cursor-pointer text-lg transition-all duration-300 hover:scale-110">👤</button>
+            </div>
+        </header>
+
+        <!-- Form Container -->
+        <div class="form-container bg-sidebar rounded-3xl p-10 max-w-4xl mx-auto">
+            <!-- Search Bar -->
+
+            <!-- Upload Area -->
+            <div class="upload-section mb-8">
+                <div class="upload-box border-4 border-dashed border-gray-300 rounded-2xl p-16 text-center bg-white cursor-pointer transition-all duration-300 hover:border-primary hover:bg-gray-50">
+                    <div class="upload-icon text-6xl mb-4">📁</div>
+                    <p class="text-gray-600 text-base">Drag and drop files here or click to browse</p>
+                    <input type="file" id="fileInput" hidden multiple>
+                </div>
+            </div>
+
+            <!-- Form Fields -->
+            <div class="form-fields mb-8">
+                <div class="form-row grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                    <div class="form-group flex flex-col">
+                        <label for="title" class="mb-2 font-bold text-gray-800 text-sm">Title*</label>
+                        <input type="text" id="title" required class="px-4 py-3 border-2 border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:border-primary">
+                    </div>
+                    <div class="form-group flex flex-col">
+                        <label for="category" class="mb-2 font-bold text-gray-800 text-sm">Category*</label>
+                        <select id="category" required class="px-4 py-3 border-2 border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:border-primary">
+                            <option value="">Select Category</option>
+                            <option value="math">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="history">History</option>
+                            <option value="language">Language</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group flex flex-col">
+                    <label for="description" class="mb-2 font-bold text-gray-800 text-sm">Description</label>
+                    <textarea id="description" rows="4" class="px-4 py-3 border-2 border-gray-300 rounded-lg text-sm bg-white resize-y min-h-[100px] focus:outline-none focus:border-primary"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="button-container text-center">
+                <button class="submit-btn px-20 py-4 bg-primary text-white border-none rounded-full text-base font-bold cursor-pointer transition-all duration-300 hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle file upload click
+        document.querySelector('.upload-box').addEventListener('click', function() {
+            document.getElementById('fileInput').click();
+        });
+
+        // Handle file selection
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const files = e.target.files;
+            if (files.length > 0) {
+                const uploadBox = document.querySelector('.upload-box p');
+                uploadBox.textContent = `${files.length} file(s) selected`;
+            }
+        });
+
+        // Handle drag and drop
+        const uploadBox = document.querySelector('.upload-box');
+        
+        uploadBox.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            this.style.borderColor = '#b84c12';
+            this.style.backgroundColor = '#f9f4f4';
+        });
+
+        uploadBox.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            this.style.borderColor = '#ddd';
+            this.style.backgroundColor = 'white';
+        });
+
+        uploadBox.addEventListener('drop', function(e) {
+            e.preventDefault();
+            this.style.borderColor = '#ddd';
+            this.style.backgroundColor = 'white';
+            
+            const files = e.dataTransfer.files;
+            document.getElementById('fileInput').files = files;
+            
+            if (files.length > 0) {
+                const uploadText = this.querySelector('p');
+                uploadText.textContent = `${files.length} file(s) selected`;
+            }
+        });
+
+        // Handle form submission
+        document.querySelector('.submit-btn').addEventListener('click', function() {
+            const title = document.getElementById('title').value;
+            const category = document.getElementById('category').value;
+            
+            if (!title || !category) {
+                alert('Please fill in all required fields (Title and Category)');
+                return;
+            }
+            
+            alert('Resource submitted successfully!');
+            // Here you would typically send the data to your backend
+        });
+    </script>
+</body>
+</html>

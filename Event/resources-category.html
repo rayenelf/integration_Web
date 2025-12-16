@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - MATH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="css/resources.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#b84c12',
+                        'primary-hover': '#9a3d0e',
+                        sidebar: '#EBCDC3',
+                        'sidebar-hover': '#cea69a',
+                        'sidebar-dark': '#6c4637',
+                        'bg-light': '#D9D9D9',
+                        'bg-card': '#0A8CB2',
+                        'bg-beige': '#CEA69A',
+                        'bg-brown': '#B5927E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#DABCB2] font-sans">
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div>
+            <img src="icons/logo.svg" alt="Logo" class="sidebar-logo">
+        </div>
+        <ul>
+            <li><a href="#">
+                <span class="text-2xl">🏠</span>
+                <span class="text-xs">Groups</span>
+            </a></li>
+            <li><a href="#">
+                <span class="text-2xl">📅</span>
+                <span class="text-xs">event</span>
+            </a></li>
+            <li><a href="#">
+                <span class="text-2xl">📁</span>
+                <span class="text-xs">Portfolio</span>
+            </a></li>
+            <li><a href="#">
+                <span class="text-2xl">💼</span>
+                <span class="text-xs">offers</span>
+            </a></li>
+            <li><a href="#">
+                <span class="text-2xl">🤝</span>
+                <span class="text-xs">Covoiturage</span>
+            </a></li>
+            <li><a href="resources.html" class="active">
+                <span class="text-2xl">📚</span>
+                <span class="text-xs">Ressources</span>
+            </a></li>
+        </ul>
+        <button class="logout-btn">log out</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content ml-20 p-8 lg:p-12">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <div class="header-left">
+                <h1 class="text-3xl font-bold text-gray-800">MATH</h1>
+            </div>
+            <div class="header-right flex gap-4">
+                <button class="notification-btn w-10 h-10 rounded-full border-none bg-sidebar cursor-pointer text-lg transition-all duration-300 hover:scale-110">🔔</button>
+                <button class="profile-btn w-10 h-10 rounded-full border-none bg-sidebar cursor-pointer text-lg transition-all duration-300 hover:scale-110">👤</button>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-section flex items-center gap-5 mb-8">
+            <div class="search-bar flex-1 flex items-center bg-white border-2 border-gray-300 rounded-full px-3 py-1">
+                <input type="text" placeholder="Articles and resources" class="flex-1 px-4 py-2 border-none text-base bg-transparent focus:outline-none">
+                <button class="search-btn w-9 h-9 border-none bg-transparent cursor-pointer text-lg transition-all duration-300 hover:scale-110">🔍</button>
+            </div>
+            <button class="filter-icon-btn w-11 h-11 rounded-full border-2 border-gray-300 bg-white cursor-pointer text-xl transition-all duration-300 hover:bg-sidebar hover:border-primary hover:scale-110">⚙️</button>
+        </div>
+
+        <!-- Resources Grid -->
+        <div class="resources-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            <!-- Resource Card 1 -->
+            <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                    <img src="images/math.jpg" alt="Mathematics" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="resource-info p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">MATHEMATICS</h3>
+                    <div class="resource-stats flex gap-5 text-gray-600 text-sm">
+                        <span class="flex items-center gap-1">👁️ 4.5k</span>
+                        <span class="flex items-center gap-1">⬇️ 2.1k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resource Card 2 -->
+            <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                    <img src="images/algebra.jpg" alt="Blackboard Math" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="resource-info p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">ALGEBRA BASICS</h3>
+                    <div class="resource-stats flex gap-5 text-gray-600 text-sm">
+                        <span class="flex items-center gap-1">👁️ 3.2k</span>
+                        <span class="flex items-center gap-1">⬇️ 1.5k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resource Card 3 -->
+            <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                    <img src="images/calculus.jpg" alt="Math Formulas" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="resource-info p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">CALCULUS GUIDE</h3>
+                    <div class="resource-stats flex gap-5 text-gray-600 text-sm">
+                        <span class="flex items-center gap-1">👁️ 2.8k</span>
+                        <span class="flex items-center gap-1">⬇️ 1.3k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resource Card 4 -->
+            <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                    <img src="images/math.jpg" alt="Mathematics Study" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="resource-info p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">MATHEMATICS STUDY</h3>
+                    <div class="resource-stats flex gap-5 text-gray-600 text-sm">
+                        <span class="flex items-center gap-1">👁️ 5.1k</span>
+                        <span class="flex items-center gap-1">⬇️ 2.8k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resource Card 5 -->
+            <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                    <img src="images/geometry.jpg" alt="Geometry" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="resource-info p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">GEOMETRY</h3>
+                    <div class="resource-stats flex gap-5 text-gray-600 text-sm">
+                        <span class="flex items-center gap-1">👁️ 3.7k</span>
+                        <span class="flex items-center gap-1">⬇️ 1.9k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resource Card 6 -->
+            <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                    <img src="images/vectors.jpg" alt="Vectors" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="resource-info p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">VECTOR ANALYSIS</h3>
+                    <div class="resource-stats flex gap-5 text-gray-600 text-sm">
+                        <span class="flex items-center gap-1">👁️ 2.3k</span>
+                        <span class="flex items-center gap-1">⬇️ 1.1k</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination flex justify-center gap-3 mt-10">
+            <button class="page-btn active px-5 py-2 border-2 border-gray-300 rounded-lg bg-white cursor-pointer text-sm font-bold transition-all duration-300 hover:bg-sidebar hover:border-primary">1</button>
+            <button class="page-btn px-5 py-2 border-2 border-gray-300 rounded-lg bg-white cursor-pointer text-sm font-bold transition-all duration-300 hover:bg-sidebar hover:border-primary">2</button>
+            <button class="page-btn px-5 py-2 border-2 border-gray-300 rounded-lg bg-white cursor-pointer text-sm font-bold transition-all duration-300 hover:bg-sidebar hover:border-primary">3</button>
+            <button class="page-btn px-5 py-2 border-2 border-gray-300 rounded-lg bg-white cursor-pointer text-sm font-bold transition-all duration-300 hover:bg-sidebar hover:border-primary">4</button>
+            <button class="page-btn px-5 py-2 border-2 border-gray-300 rounded-lg bg-white cursor-pointer text-sm font-bold transition-all duration-300 hover:bg-sidebar hover:border-primary">Next</button>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        const searchInput = document.querySelector('.search-bar input');
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.resource-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Pagination
+        const pageButtons = document.querySelectorAll('.page-btn');
+        pageButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent !== 'Next') {
+                    pageButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Filter button (you can expand this functionality)
+        document.querySelector('.filter-icon-btn').addEventListener('click', function() {
+            alert('Filter options would open here');
+        });
+    </script>
+</body>
+</html>
