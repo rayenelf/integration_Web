@@ -9,9 +9,8 @@ $shadow: 0 12px 28px rgba(0,0,0,0.10);
 html, body { height: 100%; }
 body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: $text; background: $bg-gradient; }
 
-// Keep sidebar styles coming from nav-bar.css. We only style the groups content here.
 .main-content {
-  margin-left: 150px; // matches Paiement sidebar width
+  margin-left: 150px; 
   min-height: 100vh;
   padding: 24px 28px;
 }
