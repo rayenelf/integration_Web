@@ -1,0 +1,115 @@
+/* CARTE */
+.carte {
+  width: 700px;
+  max-width: 90%;
+  height: 600px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centre tout verticalement */
+  align-items: center;       /* centre tout horizontalement */
+  position: relative;
+  margin: 40px auto;         /* centre la carte dans la page */
+
+  background-image: url("ddd.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 4px 10px rgba(62, 62, 62, 0.3);
+
+  /* Titre en haut */
+  h1 {
+    color: rgb(110, 53, 9);
+    margin: 0;
+    position: absolute;
+    top: 30px;               /* un peu plus bas pour laisser de l'espace */
+    text-align: center;
+    font-size: 2.8rem;
+  }
+
+  /* Conteneur du formulaire pour centrer les champs */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* centre les labels/inputs horizontalement */
+    gap: 35px;               /* espace entre chaque champ */
+    width: 70%;
+    margin-top: 60px;        /* pousse le formulaire vers le bas pour laisser place au titre */
+  }
+
+  input {
+    padding: 14px;
+    border-radius: 8px;
+    text-align: center;
+    border: none;
+    width: 100%;             /* prend toute la largeur du label */
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Style des labels */
+.pp {
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(76, 31, 11);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* TES BOUTONS .button-50 – JE NE TOUCHÉ À RIEN, JE LES AI JUSTE ADAPTÉS POUR ÊTRE BIEN PLACÉS */
+.button-50 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 120px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+/* Bouton principal "Confirmer" */
+.button-50.btn-style {
+  bottom: 50px;
+  background-color: #562809;
+}
+
+/* Bouton secondaire "Annuler" */
+.button-50.ann-style {
+  bottom: 5px;
+  background-color: #a7a7a7;
+  color: #f0f0f0;
+}
+
+/* Effets au survol */
+.button-50:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Effet au clic */
+.button-50:active {
+  transform: translateX(-50%) translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive : boutons plus petits sur grand écran (comme tu l’avais déjà) */
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
+}
