@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>UniConnect - Profil de Chauffeur</title>
+</head>
+<body class="bg-[#e9d5d5] flex flex-col h-screen font-sans overflow-hidden">
+
+
+    <nav class="h-10 bg-[#f3e8e8] border-b border-gray-300 flex items-center justify-between px-4 shrink-0">
+        <div class="flex items-center gap-4">
+            <div class="flex gap-3 text-gray-400 text-sm">
+                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-arrow-right opacity-30"></i>
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+            <div class="bg-white border border-gray-300 rounded-full px-3 py-0.5 text-[11px] text-gray-500 w-[400px]">
+                www.UniConnect.com/signin_in
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
+            <div class="w-7 h-7 bg-gray-200 border border-gray-300 rounded-full flex items-center justify-center text-[11px] font-bold text-gray-600">M</div>
+            <i class="fa-solid fa-ellipsis-vertical text-gray-400 text-xs"></i>
+        </div>
+    </nav>
+    <div class="flex flex-1 overflow-hidden">
+        
+        <aside class="w-20 bg-[#f3e8e8] border-r border-gray-300 flex flex-col items-center py-4 space-y-6 shrink-0">
+            <div class="flex flex-col items-center text-[10px] text-gray-500">
+                <div class="w-10 h-10 bg-blue-200 rounded flex items-center justify-center mb-1"><i class="fa-solid fa-users text-blue-600"></i></div>
+                Groups
+            </div>
+            <div class="flex flex-col items-center text-[10px] text-gray-500">
+                <div class="w-10 h-10 bg-pink-100 rounded flex items-center justify-center mb-1"><i class="fa-solid fa-calendar-days text-red-400"></i></div>
+                event
+            </div>
+            <div class="flex flex-col items-center text-[10px] text-gray-500">
+                <div class="w-10 h-10 bg-gray-200 rounded flex items-center justify-center mb-1"><i class="fa-solid fa-briefcase text-gray-600"></i></div>
+                Portfolio
+            </div>
+            <div class="flex flex-col items-center text-[10px] text-gray-500">
+                <div class="w-10 h-10 bg-[#d2b4a0] rounded flex items-center justify-center mb-1"><i class="fa-solid fa-briefcase text-orange-900 opacity-60"></i></div>
+                offres
+            </div>
+            <div class="flex flex-col items-center text-[10px]">
+                <div class="w-12 h-10 bg-[#bc7b68] rounded flex items-center justify-center mb-1 shadow-md"><i class="fa-solid fa-car-side text-white"></i></div>
+                <span class="text-[#bc7b68] font-bold">Covoiturage</span>
+            </div>
+            <div class="mt-auto pb-4">
+                <button class="bg-black text-white text-[10px] py-1 px-3 rounded">log out</button>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-8 overflow-y-auto">
+            <h1 class="text-4xl font-bold text-gray-900 mb-6">Profil de chauffeur</h1>
+
+            <div class="bg-white rounded-3xl p-8 flex items-center gap-10 shadow-sm mb-8">
+                <div class="relative group">
+    <img id="profilePic" src="https://via.placeholder.com/120" alt="Avatar" class="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover">
+    
+    <label for="file-upload" class="absolute bottom-0 right-0 bg-[#bc7b68] text-white p-2 rounded-full cursor-pointer hover:bg-[#a66a58] transition-colors shadow-md border-2 border-white">
+        <i class="fa-solid fa-camera text-[10px]"></i>
+    </label>
+    <input id="file-upload" type="file" class="hidden" accept="image/*" onchange="previewImage(event)">
+</div>
+                <div class="flex-1 flex justify-between items-start">
+                    <div class="space-y-1">
+                        <h2 class="text-2xl font-bold text-gray-800">Mario Durand</h2>
+                        <p class="text-sm text-gray-500">Tunis, Tunisie &nbsp; | &nbsp; Étudiant en 4ème année</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-12 gap-y-4 text-xs">
+                        <div><span class="text-gray-400">Numéro de téléphone :</span> <span class="ml-2 font-bold">+21692368745</span></div>
+                        <div><span class="text-gray-400">Localisation :</span> <span class="ml-2 font-bold">El Ghazela, Ariana</span></div>
+                        <div><span class="text-gray-400">Email :</span> <span class="ml-2 font-bold">mario.durand@gmail.com</span></div>
+                        <div><span class="text-gray-400">Motorisé :</span> <span class="ml-2 font-bold text-gray-800">Oui</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8">
+                
+                <div class="bg-white rounded-3xl p-8 shadow-sm">
+                    <h3 class="text-xl font-bold mb-8">Informations de véhicule</h3>
+                    <div class="grid grid-cols-2 gap-y-6 text-xs">
+                        <div><span class="text-gray-400">Type :</span> <span class="ml-4 font-bold">Citadine</span></div>
+                        <div><span class="text-gray-400">Immatriculation :</span> <span class="ml-4 font-bold">123-TUN-456</span></div>
+                        <div><span class="text-gray-400">Marque :</span> <span class="ml-4 font-bold">Renault</span></div>
+                        <div><span class="text-gray-400">Année :</span> <span class="ml-4 font-bold">2023</span></div>
+                        <div><span class="text-gray-400">Modèle :</span> <span class="ml-4 font-bold">Clio 5</span></div>
+                        <div><span class="text-gray-400">Place :</span> <span class="ml-4 font-bold">4</span></div>
+                        <div><span class="text-gray-400">Couleur :</span> <span class="ml-4 font-bold">Blanc</span></div>
+                        <div><span class="text-gray-400">Climatisée :</span> <span class="ml-4 font-bold">Oui</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-8">Statut de trajet</h3>
+                        <div class="relative flex items-center justify-between w-full max-w-sm mx-auto px-10 mb-10">
+                            <div class="absolute h-0.5 bg-black top-5 left-10 right-10 -z-0"></div>
+                            <div class="flex flex-col items-center relative z-10">
+                                <div class="w-10 h-10 bg-black rounded-full mb-2"></div>
+                                <span class="text-[10px] font-bold text-center leading-tight">Demande<br>envoyée</span>
+                            </div>
+                            <div class="flex flex-col items-center relative z-10">
+                                <div class="w-10 h-10 bg-white border-2 border-black rounded-full mb-2"></div>
+                                <span class="text-[10px] font-bold">Consultée</span>
+                            </div>
+                            <div class="flex flex-col items-center relative z-10">
+                                <div class="w-10 h-10 bg-white border-2 border-black rounded-full mb-2"></div>
+                                <span class="text-[10px] font-bold">Traitée</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Avis</h3>
+                        <div class="flex items-center gap-1 text-yellow-400 text-xl mb-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star text-gray-300"></i>
+                            <span class="text-[10px] text-gray-400 ml-2 font-normal">15 Avis</span>
+                        </div>
+                        <button class="bg-[#333] text-white text-[10px] px-6 py-2 rounded">Consulter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-end mt-6">
+                <button class="bg-[#333] text-white px-10 py-3 rounded-xl text-xs hover:bg-black transition">Anuller</button>
+            </div>
+        </main>
+    </div>
+
+</body>
+<script>
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const output = document.getElementById('profilePic');
+            output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+</html>n
