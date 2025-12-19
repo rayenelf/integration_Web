@@ -1,0 +1,14 @@
+{
+  "name": "uniconect-event",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "tailwindcss": "^3.4.8",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0"
+  },
+  "scripts": {
+    "dev": "tailwindcss -i ./EventScss/tailwind.css -o ./EventScss/dist/tailwind.css --watch",
+    "build:css": "tailwindcss -i ./EventScss/tailwind.css -o ./EventScss/dist/tailwind.css --minify"
+  }
+}

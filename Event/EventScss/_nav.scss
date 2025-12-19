@@ -7,7 +7,8 @@
   height: 100vh;
   background-color: #E8D5D5;
   color: white;
-  padding: 1px;
+  padding: 12px 8px;
+  overflow-y: auto;
   position: fixed; /* elle reste collée à gauche */
   top: 0;
   left: 0;
@@ -47,25 +48,19 @@
   padding: 30px;
 }
 .nn {
-    padding: 6px 12px;
-    border: 2px solid #b84c12;      /* bordure */
-    border-radius: 8px;
-    color: #b84c12;                 /* couleur du texte */
-    transition: 0.3s;
-    
-
-     width: 80px;      /* même largeur pour tous */
-    height: 25px;
-
-    display: flex;
-    flex-direction: column;   /* icône en haut + texte en bas */
-    align-items: center;      /* centre horizontalement */
-    justify-content: center;  /* centre verticalement */
-    text-align: center;       /* texte centré */
-    gap: 5px;                 /* espace entre icône et texte */
-    padding: 10px;
-
-
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row; /* icône à gauche + texte à droite */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid #b84c12;
+  border-radius: 8px;
+  color: #b84c12;
+  background: transparent;
+  transition: 0.2s;
 }
 
 /* Image en haut de la sidebar */
@@ -91,21 +86,21 @@
     color: white;
 }
 .main-nav {
-    display: flex;
-    flex-direction: column; /* vertical */
-    gap: 12px;              /* espace entre les boutons */
-    align-items: flex-start; /* ou center si tu veux centré */
+  display: flex;
+  flex-direction: column; /* vertical */
+  gap: 12px; /* espace entre les boutons */
+  align-items: stretch; /* laisser les éléments occuper toute la largeur */
 }
 
 
 /* Conteneur principal */
 .main-content {
-    margin-left: 150px; /* laisse la place pour la sidebar */
-    display: flex;
-    justify-content: center; /* centre horizontalement */
-    align-items: center;     /* centre verticalement */
-    height: calc(100vh - 20px); /* prend toute la hauteur disponible */
-    padding-top: 20px;      /* espace au-dessus si nécessaire */
+  margin-left: 150px; /* laisse la place pour la sidebar */
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: flex-start; /* commencer en haut pour afficher les en-têtes */
+  min-height: calc(100vh - 20px); /* prend au moins toute la hauteur disponible */
+  padding: 40px 20px; /* espace autour du contenu */
 }
 
 /* Contenu centré */

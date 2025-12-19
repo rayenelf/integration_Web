@@ -1,0 +1,6 @@
+/* Entry file for Tailwind built CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add your custom utilities or component layers below if needed */

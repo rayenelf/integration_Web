@@ -4,12 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Paiement - Uniconect</title>
+  <link rel="stylesheet" href="../EventScss/dist/tailwind.css">
   <link rel="stylesheet" href="../EventScss/main.css">
 </head>
 <body>
 
-  <!-- Ta sidebar reste 100% intacte -->
-  <header class="sidebar">
+  <!-- Sidebar (utiliser <aside> pour la navigation latérale) -->
+  <aside class="sidebar" aria-label="Navigation latérale">
     <div class="container">
       <nav class="main-nav" aria-label="Navigation principale">
         <img src="Logo.png" alt="Logo" class="sidebar-logo">
@@ -21,10 +22,11 @@
         <a class="nav-link nn" href="#ressources"><div>Ressources</div></a>
       </nav>
     </div>
-  </header>
+  </aside>
 
   <!-- Contenu principal -->
-  <div class="main-content">
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <main class="main-content" id="main-content">
     <div class="center-space">
 
       <!-- Ta carte avec le formulaire centré au milieu -->
@@ -56,7 +58,7 @@
       </div>
 
     </div>
-  </div>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
