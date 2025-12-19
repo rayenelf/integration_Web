@@ -1,0 +1,25 @@
+/* FLEX CONTAINER */
+.flex-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+/* OLD BOX MODEL */
+div.exemple {
+  display: -webkit-box;
+  display: -moz-box;
+
+  height: 400px;
+  width: 300px;
+
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+
+  -webkit-box-align: center;
+  -moz-box-align: center;
+
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+}

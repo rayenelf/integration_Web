@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Création manuelle d'événement</title>
+  <link rel="stylesheet" href="../EventScss/main.css">
+</head>
+<body>
+
+  <!-- Sidebar à gauche -->
+  <aside class="sidebar" aria-label="Navigation latérale">
+    <div class="container">
+      <nav class="main-nav" aria-label="Navigation principale">
+        <img src="Logo.png" alt="Logo Uniconect" class="sidebar-logo">
+            <a class="nav-link nn" href="#groups"><div>👥</div><div>Groups</div></a>
+        <a class="nav-link nn active" href="listeEvent.html"><div>🎉</div><div>Event</div></a>
+        <a class="nav-link nn" href="#portfolio"><div>📁</div><div>Portfolio</div></a>
+        <a class="nav-link nn" href="#offre"><div>💼</div><div>Offre</div></a>
+        <a class="nav-link nn" href="#couvoiturage"><div>🚗</div><div>Covoiturage</div></a>
+        <a class="nav-link nn" href="#ressources"><div>📚</div><div>Ressources</div></a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Contenu principal -->
+  <main class="main-content">
+    <div class="center-space">
+
+      <!-- Bloc "Mode actuel + bouton vers IA" bien au-dessus -->
+      <div class="mode-header">
+        <span class="mode-indicator">Mode actuel : <strong>Manuel</strong></span>
+        <a href="AddAi.html" class="btn-manuelle">Créer avec IA</a>
+      </div>
+
+      <!-- Carte de création manuelle -->
+      <section class="carte-manuelle">
+        <form class="carte3" action="#" method="post" aria-labelledby="titre-creation">
+          <h1 id="titre-creation"><strong>Création d'un événement</strong></h1>
+
+          <!-- Ligne du haut : Place et Organisateur -->
+          <div class="row">
+            <label class="champ">
+              Place
+              <input type="text" name="place" placeholder="ESPRIT" required />
+            </label>
+
+            <label class="champ">
+              Organisateur
+              <input type="text" name="organisateur" placeholder="IEEE" required />
+            </label>
+          </div>
+
+          <!-- Objectif -->
+          <label class="champ full-width">
+            Objectif
+            <input type="text" name="objectif" placeholder="Hackathon" required />
+          </label>
+
+          <!-- Description -->
+          <label class="champ full-width">
+            Description
+            <textarea name="description" rows="5" placeholder="Décrivez votre événement..."></textarea>
+          </label>
+
+          <!-- Date -->
+          <label class="champ full-width date-champ">
+            Date
+            <div class="date-input-wrapper">
+              <input type="text" name="date" placeholder="08/11/2025" readonly />
+              <span class="calendar-icon">📅</span>
+            </div>
+          </label>
+
+          <!-- Boutons -->
+          <div class="boutons">
+            <button type="submit" class="button-51 btn-style">Crée l'événement</button>
+            <button type="button" class="button-51 ann-style" onclick="this.closest('form').reset()">
+              Annuler
+            </button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 - CopTA</p>
+    </div>
+  </footer>
+
+</body>
+</html>
