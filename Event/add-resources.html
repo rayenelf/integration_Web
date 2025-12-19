@@ -28,23 +28,54 @@
     </script>
 </head>
 <body class="bg-[#DABCB2] font-sans">
-    <!-- Sidebar identical to create-group.html -->
-    <header class="sidebar">
-        <div class="container">
-            <nav class="main-nav" aria-label="Navigation principale">
-                <img src="Logo.png" alt="Logo" class="sidebar-logo">
-                <a class="nav-link nn" href="#"><div>👥</div><div>Groups</div></a>
-                <a class="nav-link nn" href="#"><div>📅</div><div>Event</div></a>
-                <a class="nav-link nn" href="#"><div>📁</div><div>Portfolio</div></a>
-                <a class="nav-link nn" href="#"><div>💼</div><div>Offre</div></a>
-                <a class="nav-link nn" href="#"><div>🤝</div><div>Covoiturage</div></a>
-                <a class="nav-link nn active" href="resources.html"><div>📚</div><div>Ressources</div></a>
-            </nav>
+    <!-- Sidebar Navigation -->
+    <div class="fixed top-0 left-0 w-20 h-screen bg-[#EBCDC3] flex flex-col items-center justify-between py-3 z-50">
+        <div>
+            <img src="icons/logo.svg" alt="Logo" class="w-12 h-12 rounded-full object-cover my-2">
         </div>
-    </header>
+        <ul class="flex flex-col gap-4 flex-1 pt-5 list-none p-0 m-0">
+            <li class="w-full flex justify-center">
+                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
+                    <span class="text-2xl">🏠</span>
+                    <span class="text-xs">Groups</span>
+                </a>
+            </li>
+            <li class="w-full flex justify-center">
+                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
+                    <span class="text-2xl">📅</span>
+                    <span class="text-xs">event</span>
+                </a>
+            </li>
+            <li class="w-full flex justify-center">
+                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
+                    <span class="text-2xl">📁</span>
+                    <span class="text-xs">Portfolio</span>
+                </a>
+            </li>
+            <li class="w-full flex justify-center">
+                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
+                    <span class="text-2xl">💼</span>
+                    <span class="text-xs">offers</span>
+                </a>
+            </li>
+            <li class="w-full flex justify-center">
+                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
+                    <span class="text-2xl">🤝</span>
+                    <span class="text-xs">Covoiturage</span>
+                </a>
+            </li>
+            <li class="w-full flex justify-center">
+                <a href="resources.html" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-[#cea69a] text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:scale-105">
+                    <span class="text-2xl">📚</span>
+                    <span class="text-xs">Ressources</span>
+                </a>
+            </li>
+        </ul>
+        <button class="w-14 h-11 bg-[#6c4637] text-white border-none rounded-xl cursor-pointer text-[10px] transition-all duration-300 hover:bg-[#5a3829] hover:scale-105 mb-5 flex items-center justify-center">log out</button>
+    </div>
 
     <!-- Main Content -->
-    <div class="content">
+    <div class="content ml-20 p-8 lg:p-12">
         <!-- Header -->
         <header class="flex justify-between items-center mb-8">
             <div class="header-left">
@@ -108,12 +139,20 @@
             document.getElementById('fileInput').click();
         });
 
-        // Handle file selection
+        // Handle file selection with preview
         document.getElementById('fileInput').addEventListener('change', function(e) {
             const files = e.target.files;
             if (files.length > 0) {
-                const uploadBox = document.querySelector('.upload-box p');
-                uploadBox.textContent = `${files.length} file(s) selected`;
+                const uploadBox = document.querySelector('.upload-box');
+                const uploadText = uploadBox.querySelector('p');
+                
+                // Create file list preview
+                let fileNames = Array.from(files).map(f => f.name).join(', ');
+                if (fileNames.length > 50) fileNames = fileNames.substring(0, 50) + '...';
+                
+                uploadText.innerHTML = `<strong class="text-primary">${files.length} file(s) selected</strong><br><span class="text-sm text-gray-500">${fileNames}</span>`;
+                uploadBox.style.borderColor = '#10b981';
+                uploadBox.style.backgroundColor = '#f0fdf4';
             }
         });
 

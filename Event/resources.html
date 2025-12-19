@@ -28,27 +28,62 @@
     </script>
 </head>
 <body class="bg-[#DABCB2] font-sans">
-    <!-- Sidebar identical to create-group.html -->
-    <header class="sidebar">
-        <div class="container">
-            <nav class="main-nav" aria-label="Navigation principale">
-                <img src="Logo.png" alt="Logo" class="sidebar-logo">
-                <a class="nav-link nn" href="#"><div>👥</div><div>Groups</div></a>
-                <a class="nav-link nn" href="#"><div>📅</div><div>Event</div></a>
-                <a class="nav-link nn" href="#"><div>📁</div><div>Portfolio</div></a>
-                <a class="nav-link nn" href="#"><div>💼</div><div>Offre</div></a>
-                <a class="nav-link nn" href="#"><div>🤝</div><div>Covoiturage</div></a>
-                <a class="nav-link nn active" href="resources.html"><div>📚</div><div>Ressources</div></a>
-            </nav>
+    <!-- Sidebar Navigation -->
+    <div class="fixed top-0 left-0 w-20 h-screen bg-[#EBCDC3] flex flex-col items-center justify-between py-3 z-50">
+        <div>
+            <img src="icons/logo.svg" alt="Logo" class="w-12 h-12 rounded-full object-cover my-2">
         </div>
-    </header>
+        <ul class="flex flex-col gap-4 flex-1 pt-5 list-none p-0 m-0">
+            <li class="w-full flex justify-center">
+                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
+                    <span class="text-2xl">🏠</span>
+                    <span class="text-xs">Groups</span>
+                </a>
+            </li>
+            <li class="w-full flex justify-center">
+                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
+                    <span class="text-2xl">📅</span>
+                    <span class="text-xs">event</span>
+                </a>
+            </li>
+            <li class="w-full flex justify-center">
+                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
+                    <span class="text-2xl">📁</span>
+                    <span class="text-xs">Portfolio</span>
+                </a>
+            </li>
+            <li class="w-full flex justify-center">
+                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
+                    <span class="text-2xl">💼</span>
+                    <span class="text-xs">offers</span>
+                </a>
+            </li>
+            <li class="w-full flex justify-center">
+                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
+                    <span class="text-2xl">🤝</span>
+                    <span class="text-xs">Covoiturage</span>
+                </a>
+            </li>
+            <li class="w-full flex justify-center">
+                <a href="resources.html" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-[#cea69a] text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:scale-105">
+                    <span class="text-2xl">📚</span>
+                    <span class="text-xs">Ressources</span>
+                </a>
+            </li>
+        </ul>
+        <button class="w-14 h-11 bg-[#6c4637] text-white border-none rounded-xl cursor-pointer text-[10px] transition-all duration-300 hover:bg-[#5a3829] hover:scale-105 mb-5 flex items-center justify-center">log out</button>
+    </div>
 
     <!-- Main Content -->
-    <div class="content">
+    <div class="content ml-20 p-8 lg:p-12">
         <!-- Header -->
         <header class="flex justify-between items-center mb-8">
             <div class="header-left">
+                <nav class="text-sm text-gray-500 mb-2">
+                    <a href="#" class="hover:text-primary">Home</a> / <span class="text-gray-800 font-semibold">Resources</span>
+                </nav>
                 <h1 class="text-3xl font-bold text-gray-800">Resources</h1>
+                <p class="text-sm text-gray-600 mt-2">Browse and discover educational resources</p>
             </div>
             <div class="header-right flex gap-4">
                 <button class="notification-btn w-10 h-10 rounded-full border-none bg-sidebar cursor-pointer text-lg transition-all duration-300 hover:scale-110">🔔</button>
@@ -62,14 +97,23 @@
                 <input type="text" placeholder="Search for resources..." class="flex-1 px-4 py-2 border-none text-base bg-transparent focus:outline-none">
                 <button class="search-btn w-9 h-9 border-none bg-transparent cursor-pointer text-lg transition-all duration-300 hover:scale-110">🔍</button>
             </div>
+            <div class="filter-buttons flex flex-wrap gap-3">
+                <button class="filter-btn active px-6 py-2 border-2 rounded-2xl bg-white cursor-pointer text-sm font-bold transition-all duration-300" data-category="all">ALL</button>
+                <button class="filter-btn px-6 py-2 border-2 border-gray-300 rounded-2xl bg-white cursor-pointer text-sm font-bold transition-all duration-300" data-category="education">Education</button>
+                <button class="filter-btn px-6 py-2 border-2 border-gray-300 rounded-2xl bg-white cursor-pointer text-sm font-bold transition-all duration-300" data-category="language">Language</button>
+                <button class="filter-btn px-6 py-2 border-2 border-gray-300 rounded-2xl bg-white cursor-pointer text-sm font-bold transition-all duration-300" data-category="networking">Networking</button>
+                <button class="filter-btn px-6 py-2 border-2 border-gray-300 rounded-2xl bg-white cursor-pointer text-sm font-bold transition-all duration-300" data-category="programming">Programming</button>
+                <a href="resources-category.html" class="filter-btn px-6 py-2 border-2 border-gray-300 rounded-2xl bg-white cursor-pointer text-sm font-bold transition-all duration-300 hover:bg-sidebar hover:border-primary no-underline text-gray-700">Math</a>
+            </div>
         </div>
 
         <!-- Resources Grid -->
         <div class="resources-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
             <!-- Resource Card 1 -->
             <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl" data-category="education">
-                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100 relative">
                     <img src="images/exam.jpg" alt="Exam Preparation" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                    <span class="absolute top-3 right-3 bg-primary text-white text-xs px-3 py-1 rounded-full">Education</span>
                 </div>
                 <div class="resource-info p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">EXAM PREPARATION</h3>
@@ -82,8 +126,9 @@
 
             <!-- Resource Card 2 -->
             <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl" data-category="language">
-                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100 relative">
                     <img src="images/english.jpg" alt="Learning English" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                    <span class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full">Language</span>
                 </div>
                 <div class="resource-info p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">LEARNING ENGLISH</h3>
@@ -96,8 +141,9 @@
 
             <!-- Resource Card 3 -->
             <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl" data-category="networking">
-                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100 relative">
                     <img src="images/ccna.jpg" alt="CCNA Course" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                    <span class="absolute top-3 right-3 bg-green-500 text-white text-xs px-3 py-1 rounded-full">Networking</span>
                 </div>
                 <div class="resource-info p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">CCNA COURSE</h3>
@@ -110,8 +156,9 @@
 
             <!-- Resource Card 4 -->
             <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl" data-category="programming">
-                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100 relative">
                     <img src="images/linux.jpg" alt="Linux Penguin" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                    <span class="absolute top-3 right-3 bg-purple-500 text-white text-xs px-3 py-1 rounded-full">Programming</span>
                 </div>
                 <div class="resource-info p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">LINUX BASICS</h3>
@@ -123,9 +170,10 @@
             </div>
 
             <!-- Resource Card 5 -->
-            <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl" data-category="math" onclick="window.location.href='resources-category.html'">
-                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+            <a href="resources-category.html" class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl block no-underline" data-category="math">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100 relative">
                     <img src="images/math.jpg" alt="Mathematics" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                    <span class="absolute top-3 right-3 bg-indigo-500 text-white text-xs px-3 py-1 rounded-full">Math</span>
                 </div>
                 <div class="resource-info p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">MATHEMATICS</h3>
@@ -134,12 +182,13 @@
                         <span class="flex items-center gap-1">⬇️ 2.1k</span>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <!-- Resource Card 6 -->
             <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl" data-category="language">
-                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
+                <div class="resource-image w-full h-52 overflow-hidden bg-gray-100 relative">
                     <img src="images/france.jpg" alt="France" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                    <span class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full">Language</span>
                 </div>
                 <div class="resource-info p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">FRENCH CULTURE</h3>
@@ -161,8 +210,26 @@
         </div>
     </div>
 
+    <!-- Floating Add Button -->
+    <a href="add-resources.html" class="fixed bottom-8 right-8 w-16 h-16 bg-primary rounded-full shadow-lg flex items-center justify-center text-white text-3xl hover:bg-primary-hover transition-all duration-300 hover:scale-110 hover:shadow-2xl z-50">
+        +
+    </a>
+
     <script>
-        // Search functionality
+        // Smooth scroll
+        document.documentElement.style.scrollBehavior = 'smooth';
+        
+        // Add hover tooltips to cards
+        document.querySelectorAll('.resource-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 20px 40px rgba(184, 76, 18, 0.2)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '';
+            });
+        });
+
+        // Search functionality with animation
         const searchInput = document.querySelector('.search-bar input');
         searchInput.addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
@@ -172,31 +239,63 @@
                 const title = card.querySelector('h3').textContent.toLowerCase();
                 if (title.includes(searchTerm)) {
                     card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.3s ease-in';
                 } else {
                     card.style.display = 'none';
                 }
             });
         });
 
-        // Filter functionality
+        // Add fade-in animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Enhanced filter functionality
         const filterButtons = document.querySelectorAll('.filter-btn');
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
                 // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.classList.remove('bg-primary', 'text-white', 'border-primary');
+                });
                 // Add active class to clicked button
-                this.classList.add('active');
+                this.classList.add('active', 'bg-primary', 'text-white', 'border-primary');
                 
                 const category = this.dataset.category;
                 const cards = document.querySelectorAll('.resource-card');
+                let visibleCount = 0;
                 
                 cards.forEach(card => {
                     if (category === 'all' || card.dataset.category === category) {
                         card.style.display = 'block';
+                        card.style.animation = 'fadeIn 0.4s ease-in';
+                        visibleCount++;
                     } else {
                         card.style.display = 'none';
                     }
                 });
+                
+                // Show message if no results
+                const grid = document.querySelector('.resources-grid');
+                let noResultsMsg = document.getElementById('no-results');
+                if (visibleCount === 0) {
+                    if (!noResultsMsg) {
+                        noResultsMsg = document.createElement('div');
+                        noResultsMsg.id = 'no-results';
+                        noResultsMsg.className = 'col-span-full text-center py-20 text-gray-500';
+                        noResultsMsg.innerHTML = '<p class="text-xl">No resources found in this category</p>';
+                        grid.appendChild(noResultsMsg);
+                    }
+                } else if (noResultsMsg) {
+                    noResultsMsg.remove();
+                }
             });
         });
 
@@ -211,42 +310,5 @@
             });
         });
     </script>
-
-    <!-- Floating Add Button -->
-    <a href="add-resources.html" class="floating-add-btn" title="Add Resource">
-        <span>+</span>
-    </a>
-
-    <style>
-        .floating-add-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: #b84c12;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: 300;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(184, 76, 18, 0.4);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        
-        .floating-add-btn:hover {
-            background-color: #9a3d0e;
-            transform: scale(1.1) rotate(90deg);
-            box-shadow: 0 6px 20px rgba(184, 76, 18, 0.6);
-        }
-        
-        .floating-add-btn span {
-            line-height: 1;
-        }
-    </style>
 </body>
 </html>
