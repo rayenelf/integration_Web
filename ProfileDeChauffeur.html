@@ -10,7 +10,23 @@
 <body class="bg-[#e9d5d5] flex flex-col h-screen font-sans overflow-hidden">
 
 
-    
+    <nav class="h-10 bg-[#f3e8e8] border-b border-gray-300 flex items-center justify-between px-4 shrink-0">
+        <div class="flex items-center gap-4">
+            <div class="flex gap-3 text-gray-400 text-sm">
+                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-arrow-right opacity-30"></i>
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+            <div class="bg-white border border-gray-300 rounded-full px-3 py-0.5 text-[11px] text-gray-500 w-[400px]">
+                www.UniConnect.com/signin_in
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
+            <div class="w-7 h-7 bg-gray-200 border border-gray-300 rounded-full flex items-center justify-center text-[11px] font-bold text-gray-600">M</div>
+            <i class="fa-solid fa-ellipsis-vertical text-gray-400 text-xs"></i>
+        </div>
+    </nav>
     <div class="flex flex-1 overflow-hidden">
         
         <aside class="w-20 bg-[#f3e8e8] border-r border-gray-300 flex flex-col items-center py-4 space-y-6 shrink-0">
@@ -43,9 +59,14 @@
             <h1 class="text-4xl font-bold text-gray-900 mb-6">Profil de chauffeur</h1>
 
             <div class="bg-white rounded-3xl p-8 flex items-center gap-10 shadow-sm mb-8">
-                <div class="relative">
-                    <img src="https://via.placeholder.com/120" alt="Avatar" class="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover">
-                </div>
+                <div class="relative group">
+    <img id="profilePic" src="https://via.placeholder.com/120" alt="Avatar" class="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover">
+    
+    <label for="file-upload" class="absolute bottom-0 right-0 bg-[#bc7b68] text-white p-2 rounded-full cursor-pointer hover:bg-[#a66a58] transition-colors shadow-md border-2 border-white">
+        <i class="fa-solid fa-camera text-[10px]"></i>
+    </label>
+    <input id="file-upload" type="file" class="hidden" accept="image/*" onchange="previewImage(event)">
+</div>
                 <div class="flex-1 flex justify-between items-start">
                     <div class="space-y-1">
                         <h2 class="text-2xl font-bold text-gray-800">Mario Durand</h2>
@@ -118,4 +139,14 @@
     </div>
 
 </body>
+<script>
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const output = document.getElementById('profilePic');
+            output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
 </html>n
