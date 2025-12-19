@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paiement - Uniconect</title>
+  <link rel="stylesheet" href="../EventScss/main.css">
+</head>
+<body>
+
+  <!-- Ta sidebar reste 100% intacte -->
+  <header class="sidebar">
+    <div class="container">
+      <nav class="main-nav" aria-label="Navigation principale">
+        <img src="Logo.png" alt="Logo" class="sidebar-logo">
+        <a class="nav-link nn" href="#groups"><div>Groups</div></a>
+        <a class="nav-link nn active" href="listeEvent.html"><div>Event</div></a>
+        <a class="nav-link nn" href="#portfolio"><div>Portfolio</div></a>
+        <a class="nav-link nn" href="#offre"><div>Offre</div></a>
+        <a class="nav-link nn" href="#couvoiturage"><div>Covoiturage</div></a>
+        <a class="nav-link nn" href="#ressources"><div>Ressources</div></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <div class="main-content">
+    <div class="center-space">
+
+      <!-- Ta carte avec le formulaire centré au milieu -->
+      <div class="carte">
+        <h1><strong>PAIEMENT</strong></h1>
+
+        <form action="#" method="post">
+          <label class="pp">
+            Numéro de Carte
+            <input type="text" name="card_number" placeholder="Entrer Votre numéro de carte" required />
+          </label>
+
+          <label class="pp">
+            Nom
+            <input type="text" name="nom" placeholder="Entrer Votre Nom" required />
+          </label>
+
+          <label class="pp">
+            Prénom
+            <input type="text" name="prenom" placeholder="Entrer Votre Prénom" required />
+          </label>
+
+          <!-- Boutons au milieu -->
+          <button type="submit" class="button-50 btn-style">Confirmer</button>
+          <button type="button" class="button-50 ann-style" onclick="window.history.back()">
+            Annuler
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 - CopTA</p>
+    </div>
+  </footer>
+
+</body>
+</html>

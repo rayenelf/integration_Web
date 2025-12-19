@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uniconect - Créer un événement</title>
+  <link rel="stylesheet" href="../EventScss/main.css">
+</head>
+<body>
+
+  <!-- Sidebar à gauche -->
+  <aside class="sidebar" aria-label="Navigation latérale">
+    <div class="container">
+      <nav class="main-nav" aria-label="Navigation principale">
+        <img src="Logo.png" alt="Logo Uniconect" class="sidebar-logo">
+
+     <a class="nav-link nn" href="#groups"><div>👥</div><div>Groups</div></a>
+        <a class="nav-link nn active" href="listeEvent.html"><div>🎉</div><div>Event</div></a>
+        <a class="nav-link nn" href="#portfolio"><div>📁</div><div>Portfolio</div></a>
+        <a class="nav-link nn" href="#offre"><div>💼</div><div>Offre</div></a>
+        <a class="nav-link nn" href="#couvoiturage"><div>🚗</div><div>Covoiturage</div></a>
+        <a class="nav-link nn" href="#ressources"><div>📚</div><div>Ressources</div></a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Contenu principal -->
+  <main class="main-content">
+    <div class="center-space">
+
+      <!-- Nouveau : Indicateur + bouton de navigation simple -->
+      <div class="mode-header">
+        <span class="mode-indicator">Mode actuel : <strong>IA</strong></span>
+        <a href="Addmn.html" class="btn-manuelle">Créer manuellement</a>
+      </div>
+
+      <!-- Carte IA -->
+      <section class="carte-ia">
+        <form class="carte2" action="#" method="post" aria-labelledby="titre-ia">
+          <h1 id="titre-ia"><strong>Généré ton Event avec Ai</strong></h1>
+
+          <div class="champ-description">
+            <label for="description" class="visually-hidden">Description</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="8"
+              placeholder="Décris ce que tu veux générer..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="boutons">
+            <button type="submit" class="button-50 btn-style">Généré</button>
+            <button type="button" class="button-50 ann-style" onclick="this.closest('form').reset()">
+              Annuler
+            </button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 - CopTA</p>
+    </div>
+  </footer>
+
+</body>
+</html>

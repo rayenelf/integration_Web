@@ -1,0 +1,78 @@
+.toggle-switch {
+  display: inline-block;
+  margin: 20px auto; // pour centrer si besoin
+}
+
+.toggle-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 220px;           // largeur totale du toggle
+  height: 40px;
+  background-color: #f5e6e6; // fond rose pâle comme ton design
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 4px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.option {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8c6b5e;         // couleur texte par défaut
+  z-index: 2;
+  transition: color 0.3s ease;
+  pointer-events: none;   // pour que le clic passe au label
+}
+
+.option.left {
+  margin-left: 10px;
+}
+
+.option.right {
+  margin-right: 10px;
+}
+
+.slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 104px;           // environ la moitié moins un peu d'espace
+  height: 32px;
+  background-color: #6c4637; // couleur marron foncé du curseur
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* État activé : bascule vers "Manuelle" */
+#mode-toggle:checked + .toggle-label {
+  background-color: #e8d5d5; // un peu plus clair quand activé (optionnel)
+}
+
+#mode-toggle:checked + .toggle-label .slider {
+  transform: translateX(108px); // décalage pour aller à droite
+  background-color: #5a3a2d;   // un peu plus foncé quand sélectionné
+}
+
+#mode-toggle:checked + .toggle-label .option.right {
+  color: white;                // "Manuelle" en blanc quand sélectionné
+}
+
+#mode-toggle:checked + .toggle-label .option.left {
+  color: #8c6b5e;              // "IA" reste en couleur normale
+}
+
+/* État par défaut : "IA" sélectionné */
+.toggle-label .option.left {
+  color: white;                // "IA" en blanc au départ
+}
+
+.toggle-label .option.right {
+  color: #8c6b5e;
+}

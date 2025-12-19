@@ -1,0 +1,152 @@
+// Variables pour personnaliser facilement
+$bg-carte: #f5e6e6;        // rose pâle comme sur la photo
+$border-color: #d3b8b8;
+$text-color: #6c4637;
+
+.carte3 {
+  width: 800px;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: $bg-carte;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    text-align: center;
+    color: $text-color;
+    font-size: 1.8rem;
+    margin: 0 0 20px 0;
+  }
+
+  .row {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .champ {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-weight: bold;
+    color: $text-color;
+    font-size: 1.1rem;
+
+    &.full-width {
+      flex: none;
+    }
+
+    input,
+    textarea {
+      margin-top: 8px;
+      padding: 12px 16px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: white;
+      transition: border 0.3s;
+
+      &:focus {
+        outline: none;
+        border-color: #b84c12;
+        box-shadow: 0 0 8px rgba(184, 76, 18, 0.2);
+      }
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+  }
+
+  // Style spécial pour le champ date
+  .date-champ {
+    position: relative;
+
+    .date-input-wrapper {
+      position: relative;
+
+      input {
+        padding-right: 51px;
+        width: 100%;
+      }
+
+      .calendar-icon {
+        position: absolute;
+        right: 15px;
+        top: 51%;
+        transform: translateY(-51%);
+        font-size: 1.5rem;
+        pointer-events: none;
+        color: #b84c12;
+      }
+    }
+  }
+
+  .boutons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+}
+
+/* Remplace ton .button-51 existant par ceci */
+.button-51 {
+  position: absolute;
+  left: 70%;
+  transform: translateX(-51%);
+  padding: 20px 120px;            /* même padding que .btn et .ann */
+  border: none;
+  border-radius: 8px;           /* même rayon que les autres */
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 56px;              /* un peu plus lisible, ajuste si besoin */
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ombre douce comme la carte2 */
+  transition: all 0.2s ease;
+}
+
+/* Version principale (comme .btn) */
+.button-51.btn-style {
+  bottom: 200px;
+ 
+  background-color: #562809;
+}
+
+/* Version secondaire (comme .ann) */
+.button-51.ann-style {
+  bottom: 155px;
+  background-color: #a7a7a7;
+  color: #f0f0f0; /* texte un peu plus clair pour meilleure lisibilité */
+}
+
+/* Effets au survol */
+.button-51:hover {
+  transform: translateX(-51%) translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Effet au clic (comme l'original : léger enfoncement) */
+.button-51:active {
+  transform: translateX(-51%) translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive si besoin */
+@media (min-width: 768px) {
+  .button-51 {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
+}
