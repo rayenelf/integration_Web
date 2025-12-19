@@ -28,42 +28,23 @@
     </script>
 </head>
 <body class="bg-[#DABCB2] font-sans">
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-        <div>
-            <img src="icons/logo.svg" alt="Logo" class="sidebar-logo">
+    <!-- Sidebar identical to create-group.html -->
+    <header class="sidebar">
+        <div class="container">
+            <nav class="main-nav" aria-label="Navigation principale">
+                <img src="Logo.png" alt="Logo" class="sidebar-logo">
+                <a class="nav-link nn" href="#"><div>👥</div><div>Groups</div></a>
+                <a class="nav-link nn" href="#"><div>📅</div><div>Event</div></a>
+                <a class="nav-link nn" href="#"><div>📁</div><div>Portfolio</div></a>
+                <a class="nav-link nn" href="#"><div>💼</div><div>Offre</div></a>
+                <a class="nav-link nn" href="#"><div>🤝</div><div>Covoiturage</div></a>
+                <a class="nav-link nn active" href="resources.html"><div>📚</div><div>Ressources</div></a>
+            </nav>
         </div>
-        <ul>
-            <li><a href="#">
-                <span class="text-2xl">🏠</span>
-                <span class="text-xs">Groups</span>
-            </a></li>
-            <li><a href="#">
-                <span class="text-2xl">📅</span>
-                <span class="text-xs">event</span>
-            </a></li>
-            <li><a href="#">
-                <span class="text-2xl">📁</span>
-                <span class="text-xs">Portfolio</span>
-            </a></li>
-            <li><a href="#">
-                <span class="text-2xl">💼</span>
-                <span class="text-xs">offers</span>
-            </a></li>
-            <li><a href="#">
-                <span class="text-2xl">🤝</span>
-                <span class="text-xs">Covoiturage</span>
-            </a></li>
-            <li><a href="resources.html" class="active">
-                <span class="text-2xl">📚</span>
-                <span class="text-xs">Ressources</span>
-            </a></li>
-        </ul>
-        <button class="logout-btn">log out</button>
-    </div>
+    </header>
 
     <!-- Main Content -->
-    <div class="content ml-20 p-8 lg:p-12">
+    <div class="content">
         <!-- Header -->
         <header class="flex justify-between items-center mb-8">
             <div class="header-left">
@@ -80,9 +61,6 @@
             <div class="search-bar flex-1 flex items-center bg-white border-2 border-gray-300 rounded-full px-3 py-1">
                 <input type="text" placeholder="Search for resources..." class="flex-1 px-4 py-2 border-none text-base bg-transparent focus:outline-none">
                 <button class="search-btn w-9 h-9 border-none bg-transparent cursor-pointer text-lg transition-all duration-300 hover:scale-110">🔍</button>
-            </div>
-            <div class="filter-buttons flex gap-4">
-                <button class="filter-btn active px-6 py-2 border-2 rounded-2xl bg-white cursor-pointer text-sm font-bold transition-all duration-300" data-category="all">ADD</button>
             </div>
         </div>
 
@@ -145,7 +123,7 @@
             </div>
 
             <!-- Resource Card 5 -->
-            <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl" data-category="math">
+            <div class="resource-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl" data-category="math" onclick="window.location.href='resources-category.html'">
                 <div class="resource-image w-full h-52 overflow-hidden bg-gray-100">
                     <img src="images/math.jpg" alt="Mathematics" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
                 </div>
@@ -233,5 +211,42 @@
             });
         });
     </script>
+
+    <!-- Floating Add Button -->
+    <a href="add-resources.html" class="floating-add-btn" title="Add Resource">
+        <span>+</span>
+    </a>
+
+    <style>
+        .floating-add-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #b84c12;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 300;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(184, 76, 18, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .floating-add-btn:hover {
+            background-color: #9a3d0e;
+            transform: scale(1.1) rotate(90deg);
+            box-shadow: 0 6px 20px rgba(184, 76, 18, 0.6);
+        }
+        
+        .floating-add-btn span {
+            line-height: 1;
+        }
+    </style>
 </body>
 </html>
