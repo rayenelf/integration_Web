@@ -1,68 +1,60 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Creation de groupe</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="nav-bar.css">
-  <link rel="stylesheet" href="css/create-group.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Créer un groupe</title>
+	<link rel="stylesheet" href="css/liste-group.css">
 </head>
-<body>
-  <!-- Sidebar identical to Paiement.html -->
-  <header class="sidebar">
-    <div class="container">
-      <nav class="main-nav" aria-label="Navigation principale">
-        <img src="Logo.png" alt="Logo" class="sidebar-logo">
-        <a class="nav-link nn active" href="#"><div>👥</div><div>Groups</div></a>
-        <a class="nav-link nn" href="#"><div>📅</div><div>Event</div></a>
-        <a class="nav-link nn" href="#"><div>📁</div><div>Portfolio</div></a>
-        <a class="nav-link nn" href="#"><div>💼</div><div>Offre</div></a>
-        <a class="nav-link nn" href="#"><div>🤝</div><div>Covoiturage</div></a>
-        <a class="nav-link nn" href="#"><div>📚</div><div>Ressources</div></a>
-      </nav>
-    </div>
-  </header>
+<body style="background:#f5e1e1;">
 
-  <!-- Main content area -->
-  <div class="main-content">
-    <div class="create-group">
-      <header class="topbar">
-        <button class="back" aria-label="Retour" onclick="history.back()">←</button>
-        <h1 class="title">groups/ <small style="color:#6f5e5f;font-weight:500">create group</small></h1>
-        <div class="actions">
-          <button class="bell" aria-label="Notifications">🔔</button>
-          <div class="user">
-            <span class="avatar">RE</span>
-            <span class="name">rayen Elfidha</span>
-          </div>
-          <button class="more" aria-label="Plus">⋯</button>
-        </div>
-      </header>
+	<!-- SIDEBAR -->
+	<aside class="sidebar">
+		<img src="Logo.png" class="sidebar-logo" alt="Logo">
 
-      <form class="form" action="#" method="post">
-        <div class="field">
-          <label class="label" for="classe">classe</label>
-          <div class="control"><input id="classe" name="classe" type="text" placeholder="3A1" /></div>
-        </div>
-        <div class="field">
-          <label class="label" for="matiere">matière</label>
-          <div class="control"><input id="matiere" name="matiere" type="text" placeholder="TLA" /></div>
-        </div>
-        <div class="field">
-          <label class="label" for="level">Level</label>
-          <div class="control">
-            <select id="level" name="level">
-              <option>Medium</option>
-              <option>Beginner</option>
-              <option>Advanced</option>
-            </select>
-          </div>
-        </div>
+		<nav class="main-nav">
+			<a class="nav-link active" href="liste-groupe.html">👥 Groups</a>
+			<a class="nav-link" href="#">📅 Event</a>
+			<a class="nav-link" href="#">📁 Portfolio</a>
+			<a class="nav-link" href="#">💼 Offre</a>
+			<a class="nav-link" href="#">🤝 Covoiturage</a>
+			<a class="nav-link" href="#">📚 Ressources</a>
+		</nav>
+	</aside>
 
-        <button class="submit" type="submit">Create</button>
-      </form>
-    </div>
-  </div>
+	<!-- MAIN CONTENT -->
+	<div class="header">
+		<div class="header-left">
+			<a href="#" class="back-btn" onclick="history.back()">←</a>
+
+			<span class="breadcrumb">
+				<span class="breadcrumb-main" style="font-size:1.6em;font-weight:700;color:#232323;">groups</span><span class="breadcrumb-sub" style="font-size:1em;color:#6f5e5f;font-weight:500;">/Create group </span>
+			</span>
+		</div>
+
+		<div class="user">
+			<span style="font-size:1.2em;color:#b88c2a;">🔔</span>
+			<span class="avatar" style="width:32px;height:32px;font-size:0.95em;">OB</span>
+			<span style="font-weight:bold;color:#232323;font-size:1em;">oussem benhaj</span>
+		</div>
+	</div>
+	<main class="main" style="display:flex;justify-content:center;align-items:center;min-height:70vh;">
+		<form style="display:flex;flex-direction:column;align-items:center;gap:18px;min-width:320px;">
+			<div style="width:100%;text-align:left;">
+				<label for="classe">classe</label><br>
+				<input id="classe" name="classe" type="text" placeholder="ex: 3A1" style="width:100%;padding:8px 12px;border-radius:6px;border:1px solid #ccc;">
+			</div>
+			<div style="width:100%;text-align:left;">
+				<label for="matiere">matière</label><br>
+				<input id="matiere" name="matiere" type="text" placeholder="ex: TLA" style="width:100%;padding:8px 12px;border-radius:6px;border:1px solid #ccc;">
+			</div>
+			<div style="width:100%;text-align:left;">
+				<label for="level">Level</label><br>
+				<input id="level" name="level" type="text" placeholder="ex: Medium" style="width:100%;padding:8px 12px;border-radius:6px;border:1px solid #ccc;">
+			</div>
+			<a href="liste-groupe.html" style="margin-top:18px;display:inline-block;background:#232323;color:#fff;padding:10px 32px;border-radius:10px;font-size:1em;text-align:center;text-decoration:none;">Create</a>
+		</form>
+	</main>
+
 </body>
 </html>

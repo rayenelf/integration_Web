@@ -1,75 +1,94 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Discussion de groupes</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="nav-bar.css">
-  <link rel="stylesheet" href="css/group-discussion.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Group discussion</title>
+	<link rel="stylesheet" href="css/liste-group.css">
 </head>
-<body>
-  <!-- Sidebar identical to Paiement.html -->
-  <header class="sidebar">
-    <div class="container">
-      <nav class="main-nav" aria-label="Navigation principale">
-        <img src="Logo.png" alt="Logo" class="sidebar-logo">
-        <a class="nav-link nn active" href="#"><div>👥</div><div>Groups</div></a>
-        <a class="nav-link nn" href="#"><div>📅</div><div>Event</div></a>
-        <a class="nav-link nn" href="#"><div>📁</div><div>Portfolio</div></a>
-        <a class="nav-link nn" href="#"><div>💼</div><div>Offre</div></a>
-        <a class="nav-link nn" href="#"><div>🤝</div><div>Covoiturage</div></a>
-        <a class="nav-link nn" href="#"><div>📚</div><div>Ressources</div></a>
-      </nav>
-    </div>
-  </header>
+<body style="background:#f5e1e1;">
+	<aside class="sidebar">
+		<img src="Logo.png" alt="Logo" class="sidebar-logo">
+		<nav class="main-nav" aria-label="Navigation principale">
+			<a class="nav-link active" href="liste-groupe.html"><div>👥</div><div>Groups</div></a>
+			<a class="nav-link" href="#"><div>📅</div><div>Event</div></a>
+			<a class="nav-link" href="#"><div>📁</div><div>Portfolio</div></a>
+			<a class="nav-link" href="#"><div>💼</div><div>Offre</div></a>
+			<a class="nav-link" href="#"><div>🤝</div><div>Covoiturage</div></a>
+			<a class="nav-link" href="#"><div>📚</div><div>Ressources</div></a>
+		</nav>
+	</aside>
+	<div class="header">
+		<div class="header-left">
+			<a href="liste-groupe.html" class="back-btn" onclick="history.back()">←</a>
+			<span class="breadcrumb">
+				<span class="breadcrumb-main" style="font-size:1.6em;font-weight:700;color:#232323;">groups</span><span class="breadcrumb-sub" style="font-size:1em;color:#6f5e5f;font-weight:500;">/group discussion</span>
+			</span>
+		</div>
+		<div class="user">
+			<span style="font-size:1.2em;color:#b88c2a;">🔔</span>
+			<span class="avatar" style="width:32px;height:32px;font-size:0.95em;">OB</span>
+			<span style="font-weight:bold;color:#232323;font-size:1em;">oussem benhaj</span>
+		</div>
+	</div>
+	<main class="main">
+		<div style="display:flex;gap:24px;min-height:70vh;">
+			<!-- Conversations list -->
+			<aside style="width:220px;background:#f0dede;border-radius:18px;padding:18px 0;display:flex;flex-direction:column;gap:8px;">
+				<div style="padding:0 18px;font-weight:500;color:#6d4c41;margin-bottom:12px;">Conversations</div>
+				<div style="display:flex;flex-direction:column;gap:8px;">
+					<div style="display:flex;align-items:center;gap:12px;padding:10px 18px;cursor:pointer;background:#fff;border-radius:12px;">
+						<img src="https://ui-avatars.com/api/?name=Name" style="width:32px;height:32px;border-radius:50%;background:#e9cccc;">
+						<div>
+							<div style="font-weight:500;">Name</div>
+							<div style="font-size:0.95em;color:#6d4c41;">Supporting line text...</div>
+							<div style="font-size:0.8em;color:#b88c2a;">10 min</div>
+						</div>
+					</div>
+					<!-- Répéter pour d'autres conversations -->
+					<div style="display:flex;align-items:center;gap:12px;padding:10px 18px;cursor:pointer;background:#fff;border-radius:12px;">
+						<img src="https://ui-avatars.com/api/?name=Name" style="width:32px;height:32px;border-radius:50%;background:#e9cccc;">
+						<div>
+							<div style="font-weight:500;">Name</div>
+							<div style="font-size:0.95em;color:#6d4c41;">Supporting line text...</div>
+							<div style="font-size:0.8em;color:#b88c2a;">10 min</div>
+						</div>
+					</div>
+					<!-- ... -->
+				</div>
+			</aside>
 
-  <!-- Main content area -->
-  <div class="main-content">
-    <header class="topbar">
-      <button class="back" aria-label="Retour" onclick="history.back()">←</button>
-      <h1 class="title">error symphony</h1>
-      <div class="actions">
-        <button class="bell" aria-label="Notifications">🔔</button>
-        <div class="user">
-          <span class="avatar">RE</span>
-          <span class="name">rayen elfidha/span>
-        </div>
-        <button class="more" aria-label="Plus">⋯</button>
-      </div>
-    </header>
-
-    <div class="group-discussion">
-      <!-- Left: conversations list -->
-      <aside class="sidebar-panel">
-        <h3 class="list-title">Conversations</h3>
-        <div class="conversations">
-          <a class="conv" href="#"><div class="photo"><img alt="avatar" src="https://i.pravatar.cc/80?img=11" style="width:100%;height:100%;object-fit:cover" /></div><div class="meta"><span class="n">Amine</span><span class="p">Supporting line text...</span></div><span class="time">16 min</span></a>
-          <a class="conv" href="#"><div class="photo"><img alt="avatar" src="https://i.pravatar.cc/80?img=12" style="width:100%;height:100%;object-fit:cover" /></div><div class="meta"><span class="n">Sara</span><span class="p">Supporting line text...</span></div><span class="time">16 min</span></a>
-          <a class="conv" href="#"><div class="photo"><img alt="avatar" src="https://i.pravatar.cc/80?img=32" style="width:100%;height:100%;object-fit:cover" /></div><div class="meta"><span class="n">Youssef</span><span class="p">Supporting line text...</span></div><span class="time">16 min</span></a>
-          <a class="conv" href="#"><div class="photo"><img alt="avatar" src="https://i.pravatar.cc/80?img=25" style="width:100%;height:100%;object-fit:cover" /></div><div class="meta"><span class="n">Hana</span><span class="p">Supporting line text...</span></div><span class="time">16 min</span></a>
-          <a class="conv" href="#"><div class="photo"><img alt="avatar" src="https://i.pravatar.cc/80?img=44" style="width:100%;height:100%;object-fit:cover" /></div><div class="meta"><span class="n">Mehdi</span><span class="p">Supporting line text...</span></div><span class="time">16 min</span></a>
-          <a class="conv" href="#"><div class="photo"><img alt="avatar" src="https://i.pravatar.cc/80?img=5" style="width:100%;height:100%;object-fit:cover" /></div><div class="meta"><span class="n">Nada</span><span class="p">Supporting line text...</span></div><span class="time">16 min</span></a>
-        </div>
-      </aside>
-
-      <!-- Right: chat panel -->
-      <section class="chat-panel">
-        <div class="chat-header">
-          <h3 class="chat-title">error symphony</h3>
-        </div>
-
-        <div class="messages">
-          <div class="msg"><p class="text">oh this probleme is caused by ......</p></div>
-          <div class="msg me"><p class="text">this the error what is the solution?</p></div>
-        </div>
-
-        <div class="composer">
-          <div class="input"><input type="text" placeholder="Message" /><span>😊</span><span>📎</span></div>
-          <button class="send">Send</button>
-        </div>
-      </section>
-    </div>
-  </div>
+			<!-- Chat area -->
+			<section style="flex:1;background:#d6b6b6;border-radius:32px;padding:24px 32px;display:flex;flex-direction:column;gap:18px;box-shadow:0 2px 24px #e7d0d0;">
+				<div style="font-size:1.2em;font-weight:500;margin-bottom:8px;">error symphony</div>
+				<div style="flex:1;display:flex;flex-direction:column;gap:12px;">
+					<!-- Message left -->
+					<div style="display:flex;align-items:flex-end;gap:10px;">
+						<img src="https://ui-avatars.com/api/?name=User" style="width:28px;height:28px;border-radius:50%;background:#e9cccc;">
+						<div style="background:#fff;padding:10px 18px;border-radius:16px 16px 16px 4px;color:#232323;max-width:340px;">oh this problem is caused by ........</div>
+					</div>
+					<!-- Message right -->
+					<div style="display:flex;justify-content:flex-end;align-items:flex-end;gap:10px;">
+						<div style="background:#232323;color:#fff;padding:10px 18px;border-radius:16px 16px 4px 16px;max-width:340px;">this the error what is the solution?</div>
+						<div style="background:#fff;padding:10px 18px;border-radius:16px;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:120px;">
+							<div style="width:48px;height:48px;background:#e9cccc;border-radius:12px;margin-bottom:6px;"></div>
+							<div style="font-size:0.95em;color:#232323;">error 23dndndn243432<br>dndnkdndn</div>
+						</div>
+					</div>
+					<!-- Message right simple -->
+					<div style="display:flex;justify-content:flex-end;align-items:flex-end;gap:10px;">
+						<div style="background:#232323;color:#fff;padding:10px 18px;border-radius:16px 16px 4px 16px;max-width:340px;">Great!</div>
+					</div>
+				</div>
+				<!-- Input area -->
+				<form style="display:flex;align-items:center;gap:10px;margin-top:18px;">
+					<button type="button" style="background:none;border:none;font-size:1.3em;">😊</button>
+					<button type="button" style="background:none;border:none;font-size:1.3em;">➕</button>
+					<input type="text" placeholder="Type a message..." style="flex:1;padding:10px 18px;border-radius:20px;border:none;background:#f5e1e1;font-size:1em;">
+					<button type="submit" style="background:none;border:none;font-size:1.3em;">🔍</button>
+				</form>
+			</section>
+		</div>
+	</main>
 </body>
 </html>
