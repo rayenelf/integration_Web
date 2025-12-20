@@ -66,30 +66,36 @@
                     <h2 class="text-3xl font-bold text-gray-800 mb-12">Cherchez un trajet</h2>
 
                     <div class="w-full max-w-md space-y-8">
+                        <!-- Dropdown Départ -->
                         <div class="relative">
-                            <input type="text" value="Esprit" 
-                                class="w-full p-3 rounded-md border-2 border-[#7c5fa2] focus:outline-none bg-white text-gray-700">
-                            <span class="absolute right-3 top-3 text-gray-400 cursor-pointer">✕</span>
+                            <select class="w-full p-3 rounded-md border-2 border-[#7c5fa2] focus:outline-none bg-white text-gray-700 appearance-none cursor-pointer">
+                                <option value="" disabled>Sélectionner le départ</option>
+                                <option value="esprit" selected>Esprit</option>
+                                <option value="lac1">Lac 1</option>
+                                <option value="lac2">Lac 2</option>
+                                <option value="ariana">Ariana</option>
+                                <option value="tunis">Tunis Centre</option>
+                            </select>
+                            <span class="absolute right-3 top-3 text-gray-400 pointer-events-none">▼</span>
                         </div>
 
+                        <!-- Dropdown Destination -->
                         <div class="relative">
-                            <input type="text" value="Manzeh" 
-                                class="w-full p-3 rounded-t-md border-2 border-[#7c5fa2] focus:outline-none bg-white text-gray-700">
-                            <span class="absolute right-3 top-3 text-gray-400 cursor-pointer">✕</span>
-                            
-                            <ul class="absolute w-full bg-[#f3e8e8] border-x-2 border-b-2 border-[#7c5fa2] rounded-b-md shadow-lg z-10">
-                                <li class="p-3 hover:bg-gray-200 cursor-pointer text-sm text-gray-600 border-b border-gray-200">Manzeh 5</li>
-                                <li class="p-3 hover:bg-gray-200 cursor-pointer text-sm text-gray-600 border-b border-gray-200">Manzeh 6</li>
-                                <li class="p-3 hover:bg-gray-200 cursor-pointer text-sm text-gray-600 border-b border-gray-200">Manzeh 8</li>
-                                <li class="p-3 hover:bg-gray-200 cursor-pointer text-sm text-gray-600">Manzeh 9</li>
-                            </ul>
+                            <select class="w-full p-3 rounded-md border-2 border-[#7c5fa2] focus:outline-none bg-white text-gray-700 appearance-none cursor-pointer">
+                                <option value="" disabled>Sélectionner la destination</option>
+                                <option value="manzeh5">Manzeh 5</option>
+                                <option value="manzeh6">Manzeh 6</option>
+                                <option value="manzeh8">Manzeh 8</option>
+                                <option value="manzeh9">Manzeh 9</option>
+                            </select>
+                            <span class="absolute right-3 top-3 text-gray-400 pointer-events-none">▼</span>
                         </div>
                     </div>
 
                     <div class="w-full max-w-md flex justify-end mt-24">
-                        <button class="bg-[#B66C5A] text-white px-10 py-2 rounded-lg shadow-md hover:bg-[#9A5A4A] transition">
+                        <a href="ListeTrajet.html" class="bg-[#B66C5A] text-white px-10 py-2 rounded-lg shadow-md hover:bg-[#9A5A4A] transition-all duration-300 hover:scale-105 hover:shadow-lg">
                             Cherchez
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
