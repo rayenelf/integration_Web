@@ -60,14 +60,9 @@
                 </div>
                 <span class="text-[#bc7b68] font-bold">Covoiturage</span>
             </div>
-            <div class="flex flex-col items-center text-[10px] text-gray-500">
-                <div class="w-10 h-10 bg-green-100 rounded flex items-center justify-center mb-1">
-                    <i class="fa-solid fa-book-open text-green-600"></i>
-                </div>
-                Ressources
-            </div>
+            
             <div class="mt-auto pb-4">
-                <button class="bg-black text-white text-[10px] py-1 px-3 rounded">log out</button>
+                <button id="btnConsulter" class="bg-black text-white text-[10px] py-1 px-3 rounded">log out</button>
             </div>
         </aside>
 
@@ -104,7 +99,7 @@
                             <span>Départ:Bloc A</span>
                         </div>
                     </div>
-                    <button class="absolute bottom-6 right-6 bg-[#bc7b68] text-white text-xs px-6 py-2 rounded-lg hover:brightness-105">Consulter</button>
+                    <button  class="btnConsulter absolute bottom-6 right-6 bg-[#bc7b68] text-white text-xs px-6 py-2 rounded-lg hover:brightness-105">Consulter</button>
                 </div>
 
                 <div class="bg-white rounded-xl p-8 flex justify-between items-start shadow-sm relative">
@@ -127,7 +122,7 @@
                             <span class="ml-6 font-medium text-gray-500">Départ:esprit</span>
                         </div>
                     </div>
-                    <button class="absolute bottom-6 right-6 bg-[#bc7b68] text-white text-xs px-6 py-2 rounded-lg hover:brightness-105">Consulter</button>
+                    <button  class="btnConsulter absolute bottom-6 right-6 bg-[#bc7b68] text-white text-xs px-6 py-2 rounded-lg hover:brightness-105">Consulter</button>
                 </div>
 
                 <div class="bg-white rounded-xl p-8 flex justify-between items-start shadow-sm relative">
@@ -151,7 +146,7 @@
                             <span>Départ:brawn</span>
                         </div>
                     </div>
-                    <button class="absolute bottom-6 right-6 bg-[#bc7b68] text-white text-xs px-6 py-2 rounded-lg hover:brightness-105">Consulter</button>
+                    <button  class="btnConsulter absolute bottom-6 right-6 bg-[#bc7b68] text-white text-xs px-6 py-2 rounded-lg hover:brightness-105">Consulter</button>
                 </div>
 
             </div>
@@ -170,4 +165,12 @@
     </div>
 
 </body>
+<script>
+document.querySelectorAll(".btnConsulter").forEach(button => {
+    button.addEventListener("click", function () {
+        window.location.href = "ProfileDeChauffeur.html";
+    });
+});
+</script>
+
 </html>
