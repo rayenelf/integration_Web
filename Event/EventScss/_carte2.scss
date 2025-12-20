@@ -1,0 +1,188 @@
+/* CARTE2 */
+.carte2 {
+  width: 700px;
+  height: 500px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-image: url("ai.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 4px 10px rgba(62, 62, 62, 0.3);
+
+  h1 {
+    color: rgb(199, 199, 199);
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    text-align: center;
+  }
+
+  p {
+    color: rgb(76, 31, 11);
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: none;
+    width: 80%;
+  }
+
+  .content {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .btn,
+  .ann {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 100px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .btn {
+    bottom: 40px;
+    background-color: #376c3c;
+    color: white;
+  }
+
+  .ann {
+    bottom: 5px;
+    background-color: #939338;
+    color: rgb(29, 27, 27);
+  }
+}
+
+.pp {
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(76, 31, 11);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1.5rem; // ⚠ correction (pas 1,5)
+}
+
+/* Remplace ton .button-50 existant par ceci */
+.button-50 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 120px;            /* même padding que .btn et .ann */
+  border: none;
+  border-radius: 8px;           /* même rayon que les autres */
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 56px;              /* un peu plus lisible, ajuste si besoin */
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ombre douce comme la carte2 */
+  transition: all 0.2s ease;
+}
+
+/* Version principale (comme .btn) */
+.button-50.btn-style {
+  bottom: 50px;
+ 
+  background-color: #a64d12;
+}
+
+/* Version secondaire (comme .ann) */
+.button-50.ann-style {
+  bottom: 5px;
+  background-color: #a7a7a7;
+  color: #f0f0f0; /* texte un peu plus clair pour meilleure lisibilité */
+}
+
+/* Effets au survol */
+.button-50:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Effet au clic (comme l'original : léger enfoncement) */
+.button-50:active {
+  transform: translateX(-50%) translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive si besoin */
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 10px 20px;
+    font-size: 17px;
+  }
+}
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(110, 53, 9);
+    align-self: flex-start;
+  }
+
+// ─── Variables personnalisables (change ici pour tout modifier rapidement) ───
+$textarea-width: 100%;          // Largeur (ex: 100%, 600px, 80%, etc.)
+$textarea-max-width: 700px;     // Largeur maximale (utile pour écrans larges)
+$textarea-height: 200px;        // Hauteur fixe par défaut
+$textarea-min-height: 150px;    // Hauteur minimale si resize
+$textarea-padding: 20px;        // Espace intérieur (remplace ton 80px qui était trop grand !)
+$textarea-border-color: #b84c12;
+$textarea-border-focus: #6c4637;
+$textarea-bg: rgba(255, 255, 255, 0.9);
+$textarea-font-size: 1rem;
+
+// ─── Conteneur pour contrôler la position et le centrage ───
+.champ-description {
+  width: 100%;
+  max-width: $textarea-max-width;  // même max que le textarea
+  margin: 0 auto;                  // centré horizontalement
+  // Tu peux ajouter ici : margin-top, padding, etc. pour déplacer le bloc
+}
+
+// ─── Style du textarea ───
+textarea {
+  width: $textarea-width;
+  max-width: 100%;                 // ne dépasse pas son conteneur
+  min-height: $textarea-min-height;
+  height: $textarea-height;        // hauteur de base
+  padding: $textarea-padding;
+  border-radius: 10px;
+  border: 2px solid $textarea-border-color;
+  font-size: $textarea-font-size;
+  resize: vertical;                // agrandir seulement en hauteur
+  background-color: $textarea-bg;
+  box-sizing: border-box;          // important : padding inclus dans la largeur
+  font-family: inherit;            // hérite de la police du site
+
+  // Effet au focus
+  &:focus {
+    outline: none;
+    border-color: $textarea-border-focus;
+    box-shadow: 0 0 12px rgba(108, 70, 55, 0.4);
+  }
+
+  // Placeholder personnalisé (optionnel)
+  &::placeholder {
+    color: #999;
+    opacity: 0.8;
+    font-style: italic;
+  }
+}
+
+
+
