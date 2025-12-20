@@ -29,50 +29,43 @@
 </head>
 <body class="bg-[#DABCB2] font-sans">
     <!-- Sidebar Navigation -->
-    <div class="fixed top-0 left-0 w-20 h-screen bg-[#EBCDC3] flex flex-col items-center justify-between py-3 z-50">
-        <div>
-            <img src="icons/logo.svg" alt="Logo" class="w-12 h-12 rounded-full object-cover my-2">
+    <aside class="w-20 min-h-screen bg-[#F5EBE8] flex flex-col items-center py-4 gap-3 fixed left-0 top-0 z-50" aria-label="Navigation principale" role="navigation">
+        <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Groups">
+            <span class="text-xl" aria-hidden="true">👥</span>
+        </a>
+        <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Groups</span>
+
+        <a href="listeEvent.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Event">
+            <span class="text-xl" aria-hidden="true">📅</span>
+        </a>
+        <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Event</span>
+
+        <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Portfolio">
+            <span class="text-xl" aria-hidden="true">📁</span>
+        </a>
+        <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Portfolio</span>
+
+        <a href="offers.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Offers">
+            <span class="text-xl" aria-hidden="true">💼</span>
+        </a>
+        <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Offers</span>
+
+        <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Covoiturage">
+            <span class="text-xl" aria-hidden="true">🤝</span>
+        </a>
+        <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Covoiturage</span>
+
+        <a href="resources.html" class="w-12 h-12 bg-[#B66C5A] rounded-xl flex items-center justify-center mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Resources" aria-current="page">
+            <span class="text-xl" aria-hidden="true">📚</span>
+        </a>
+        <span class="text-xs text-[#B66C5A] font-medium" aria-hidden="true">Resources</span>
+
+        <div class="mt-auto mb-4">
+            <button type="button" class="px-4 py-2 bg-[#B66C5A] text-white text-xs rounded-lg hover:bg-[#9A5A4A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Se déconnecter">
+                Log out
+            </button>
         </div>
-        <ul class="flex flex-col gap-4 flex-1 pt-5 list-none p-0 m-0">
-            <li class="w-full flex justify-center">
-                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
-                    <span class="text-2xl">🏠</span>
-                    <span class="text-xs">Groups</span>
-                </a>
-            </li>
-            <li class="w-full flex justify-center">
-                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
-                    <span class="text-2xl">📅</span>
-                    <span class="text-xs">event</span>
-                </a>
-            </li>
-            <li class="w-full flex justify-center">
-                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
-                    <span class="text-2xl">📁</span>
-                    <span class="text-xs">Portfolio</span>
-                </a>
-            </li>
-            <li class="w-full flex justify-center">
-                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
-                    <span class="text-2xl">💼</span>
-                    <span class="text-xs">offers</span>
-                </a>
-            </li>
-            <li class="w-full flex justify-center">
-                <a href="#" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-white/30 text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:bg-[#cea69a] hover:scale-105">
-                    <span class="text-2xl">🤝</span>
-                    <span class="text-xs">Covoiturage</span>
-                </a>
-            </li>
-            <li class="w-full flex justify-center">
-                <a href="resources.html" class="w-14 h-14 flex flex-col items-center justify-center text-xs no-underline rounded-xl bg-[#cea69a] text-[#6c4637] gap-1 p-2 transition-all duration-300 hover:scale-105">
-                    <span class="text-2xl">📚</span>
-                    <span class="text-xs">Ressources</span>
-                </a>
-            </li>
-        </ul>
-        <button class="w-14 h-11 bg-[#6c4637] text-white border-none rounded-xl cursor-pointer text-[10px] transition-all duration-300 hover:bg-[#5a3829] hover:scale-105 mb-5 flex items-center justify-center">log out</button>
-    </div>
+    </aside>
 
     <!-- Main Content -->
     <div class="content ml-20 p-8 lg:p-12">
