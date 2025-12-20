@@ -48,26 +48,23 @@
     </div>
   </aside>
 
-  <!-- Contenu principal -->
-  <main class="main-content ml-20">
-    <!-- User Profile Header -->
-    <div class="flex justify-end items-center p-4">
-      <div class="flex items-center gap-3">
-        <span class="text-xl">🔔</span>
-        <div class="flex items-center gap-2 bg-white rounded-full px-3 py-2">
-          <div class="w-8 h-8 bg-[#B66C5A] rounded-full flex items-center justify-center text-white text-xs font-medium">OB</div>
-          <span class="text-sm text-[#5A4A4A] font-medium">oussema<br>benelhaj</span>
-        </div>
+  <!-- Header fixé en haut à droite -->
+  <div class="fixed top-4 right-4 z-50 ml-20">
+    <div class="flex items-center gap-3 bg-white rounded-full px-4 py-2 shadow-sm">
+      <div class="flex bg-gray-100 rounded-md p-0.5">
+        <span class="px-3 py-1 text-xs text-white bg-[#B66C5A] rounded">IA</span>
+        <a href="AddMn.html" class="px-3 py-1 text-xs text-gray-600 rounded hover:bg-gray-200 transition-colors">Manuel</a>
       </div>
+      <span class="text-xl">🔔</span>
+      <div class="w-8 h-8 bg-[#B66C5A] rounded-full flex items-center justify-center text-white text-xs font-medium">OB</div>
+      <span class="text-sm text-[#5A4A4A] font-medium">oussema<br>benelhaj</span>
     </div>
+  </div>
+
+  <!-- Contenu principal -->
+  <main class="main-content ml-20 pt-16">
 
     <div class="center-space">
-
-      <!-- Nouveau : Indicateur + bouton de navigation simple -->
-      <div class="mode-header">
-        <span class="mode-indicator">Mode actuel : <strong>IA</strong></span>
-        <a href="Addmn.html" class="btn-manuelle">Créer manuellement</a>
-      </div>
 
       <!-- Carte IA -->
       <section class="carte-ia">
