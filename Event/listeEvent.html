@@ -1,92 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Liste des Événements - Uniconect</title>
-  <link rel="stylesheet" href="../EventScss/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Événements - UniConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen bg-gradient-to-b from-[#D5B8B8] via-[#E8D5D5] to-[#F5EBE8]">
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-20 min-h-screen bg-[#F5EBE8] flex flex-col items-center py-4 gap-3">
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors">
+                <span class="text-xl">👥</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Groups</span>
 
-  <!-- Sidebar à gauche -->
-  <aside class="sidebar" aria-label="Navigation latérale">
-    <div class="container">
-      <nav class="main-nav" aria-label="Navigation principale">
-        <img src="Logo.png" alt="Logo Uniconect" class="sidebar-logo">
+            <a href="listeEvent.html" class="w-12 h-12 bg-[#B66C5A] rounded-xl flex items-center justify-center mt-2">
+                <span class="text-xl">📅</span>
+            </a>
+            <span class="text-xs text-[#B66C5A] font-medium">Event</span>
 
-     <a class="nav-link nn" href="#groups"><div>👥</div><div>Groups</div></a>
-        <a class="nav-link nn active" href="listeEvent.html"><div>🎉</div><div>Event</div></a>
-        <a class="nav-link nn" href="#portfolio"><div>📁</div><div>Portfolio</div></a>
-        <a class="nav-link nn" href="#offre"><div>💼</div><div>Offre</div></a>
-        <a class="nav-link nn" href="#couvoiturage"><div>🚗</div><div>Covoiturage</div></a>
-        <a class="nav-link nn" href="#ressources"><div>📚</div><div>Ressources</div></a>
-      </nav>
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">📁</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Portfolio</span>
+
+            <a href="offers.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">💼</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Offers</span>
+
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">🤝</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Covoiturage</span>
+
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">📚</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Resources</span>
+
+            <div class="mt-auto mb-4">
+                <button class="px-4 py-2 bg-[#B66C5A] text-white text-xs rounded-lg hover:bg-[#9A5A4A] transition-colors">
+                    Log out
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6">
+                <h1 class="text-2xl font-bold text-gray-900">Liste Des Events</h1>
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <input type="search" placeholder="Rechercher un événement..." 
+                            class="w-64 px-4 py-2 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B66C5A]">
+                    </div>
+                    <a href="AddAi.html" class="px-4 py-2 bg-[#4A3A3A] text-white text-sm rounded-lg hover:bg-[#3A2A2A]">Créer un event</a>
+                </div>
+            </div>
+
+            <!-- Events List -->
+            <div class="space-y-4">
+                <!-- Event Card -->
+                <div class="bg-white rounded-2xl p-4 shadow-sm flex gap-4">
+                    <img src="ux.jpg" alt="Atelier de Design UI/UX" class="w-32 h-32 object-cover rounded-xl">
+                    <div class="flex-1">
+                        <h2 class="text-lg font-bold text-gray-900">Atelier de Design UI/UX</h2>
+                        <p class="text-sm text-gray-600 mb-2">Session pratique pour apprendre les bases du design d'interface et de l'expérience utilisateur. Exercices réels et mini-projet inclus.</p>
+                        <p class="text-sm text-gray-700"><strong>Date :</strong> 12/07/2025</p>
+                        <p class="text-sm text-gray-700"><strong>Prix :</strong> 55 DT</p>
+                        <p class="text-sm text-gray-700"><strong>Lieu :</strong> ESPRIT, Bloc A — Salle Design Lab</p>
+                        <a href="Paiement.html" class="inline-block mt-2 px-4 py-2 bg-[#B66C5A] text-white text-xs rounded-lg hover:bg-[#9A5A4A]">Reserver</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex items-center justify-center gap-2 mt-8">
+                <button class="w-8 h-8 bg-white rounded-lg flex items-center justify-center hover:bg-gray-100" disabled>←</button>
+                <button class="w-8 h-8 bg-[#B66C5A] text-white rounded-lg">1</button>
+                <button class="w-8 h-8 bg-white rounded-lg hover:bg-gray-100">2</button>
+                <button class="w-8 h-8 bg-white rounded-lg hover:bg-gray-100">3</button>
+                <button class="w-8 h-8 bg-white rounded-lg hover:bg-gray-100">4</button>
+                <span class="text-gray-500">...</span>
+                <button class="w-8 h-8 bg-white rounded-lg hover:bg-gray-100">50</button>
+                <button class="w-8 h-8 bg-white rounded-lg flex items-center justify-center hover:bg-gray-100">→</button>
+            </div>
+        </main>
     </div>
-  </aside>
-
-  <!-- Contenu principal -->
-  <main class="main-content">
-    <div class="center-space">
-
-      <!-- En-tête avec titre, recherche et bouton créer -->
-      <div class="events-header">
-        <h1>Liste Des Events</h1>
-
-        <div class="header-actions">
-          <!-- Barre de recherche (maintenant bien visible) -->
-          <div class="search-bar">
-            <input type="search" id="event-search" placeholder="Rechercher un événement..." aria-label="Rechercher un événement">
-            <button type="submit" aria-label="Lancer la recherche">🔍</button>
-          </div>
-
-          <!-- Bouton qui redirige vers la page de création -->
-          <a href="AddAi.html" class="btn-create">Créer un event</a>
-          <!-- Change "AddAi.html" en "Addmn.html" si tu veux aller directement au mode manuel -->
-        </div>
-      </div>
-
-      <!-- Liste des événements -->
-      <section class="events-list">
-        <!-- Exemple d'événement 1 -->
-        <article class="event-card">
-          <div class="event-image">
-            <img src="ux.jpg" alt="Atelier de Design UI/UX">
-          </div>
-          <div class="event-content">
-            <h2 class="event-title">Atelier de Design UI/UX</h2>
-            <p class="event-description">
-              Session pratique pour apprendre les bases du design d'interface et de l'expérience utilisateur. Exercices réels et mini-projet inclus.
-            </p>
-            <p><strong>Date :</strong> 12/07/2025</p>
-            <p><strong>Prix :</strong> 55 DT</p>
-            <p><strong>Lieu :</strong> ESPRIT, Bloc A — Salle Design Lab</p>
-        <a href="Paiement.html" class="btn-reserve" role="button">Reserver</a>
-          </div>
-        </article>
-
-        <!-- Tu peux ajouter d'autres cartes ici -->
-      </section>
-
-      <!-- Pagination -->
-      <div class="pagination">
-        <button disabled>←</button>
-        <button class="active">1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>...</button>
-        <button>50</button>
-        <button>→</button>
-      </div>
-
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 - CopTA</p>
-    </div>
-  </footer>
-
 </body>
 </html>

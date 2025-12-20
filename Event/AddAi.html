@@ -5,22 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Uniconect - Créer un événement</title>
   <link rel="stylesheet" href="../EventScss/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
   <!-- Sidebar à gauche -->
-  <aside class="sidebar" aria-label="Navigation latérale">
-    <div class="container">
-      <nav class="main-nav" aria-label="Navigation principale">
-        <img src="Logo.png" alt="Logo Uniconect" class="sidebar-logo">
+  <aside class="w-20 min-h-screen bg-[#F5EBE8] flex flex-col items-center py-4 gap-3 fixed left-0 top-0" aria-label="Navigation principale" role="navigation">
+    <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Groups">
+      <span class="text-xl" aria-hidden="true">👥</span>
+    </a>
+    <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Groups</span>
 
-     <a class="nav-link nn" href="#groups"><div>👥</div><div>Groups</div></a>
-        <a class="nav-link nn active" href="listeEvent.html"><div>🎉</div><div>Event</div></a>
-        <a class="nav-link nn" href="#portfolio"><div>📁</div><div>Portfolio</div></a>
-        <a class="nav-link nn" href="#offre"><div>💼</div><div>Offre</div></a>
-        <a class="nav-link nn" href="#couvoiturage"><div>🚗</div><div>Covoiturage</div></a>
-        <a class="nav-link nn" href="#ressources"><div>📚</div><div>Ressources</div></a>
-      </nav>
+    <a href="listeEvent.html" class="w-12 h-12 bg-[#B66C5A] rounded-xl flex items-center justify-center mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Event" aria-current="page">
+      <span class="text-xl" aria-hidden="true">📅</span>
+    </a>
+    <span class="text-xs text-[#B66C5A] font-medium" aria-hidden="true">Event</span>
+
+    <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Portfolio">
+      <span class="text-xl" aria-hidden="true">📁</span>
+    </a>
+    <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Portfolio</span>
+
+    <a href="offers.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Offers">
+      <span class="text-xl" aria-hidden="true">💼</span>
+    </a>
+    <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Offers</span>
+
+    <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Covoiturage">
+      <span class="text-xl" aria-hidden="true">🤝</span>
+    </a>
+    <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Covoiturage</span>
+
+    <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Resources">
+      <span class="text-xl" aria-hidden="true">📚</span>
+    </a>
+    <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Resources</span>
+
+    <div class="mt-auto mb-4">
+      <button type="button" class="px-4 py-2 bg-[#B66C5A] text-white text-xs rounded-lg hover:bg-[#9A5A4A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Se déconnecter">
+        Log out
+      </button>
     </div>
   </aside>
 
@@ -51,8 +75,8 @@
           </div>
 
           <div class="boutons">
-            <button type="submit" class="button-50 btn-style">Généré</button>
-            <button type="button" class="button-50 ann-style" onclick="this.closest('form').reset()">
+            <button type="submit" class="button-50 btn-style" aria-label="Générer l'événement avec IA">Généré</button>
+            <button type="button" class="button-50 ann-style" onclick="this.closest('form').reset()" aria-label="Annuler et réinitialiser le formulaire">
               Annuler
             </button>
           </div>

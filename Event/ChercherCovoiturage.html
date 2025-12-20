@@ -3,69 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chercher Covoiturage - UniConnect</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>UniConnect - Ajout d'un trajet</title>
 </head>
-<body class="bg-[#e9d5d5] flex flex-col h-screen font-sans overflow-hidden">
+<body class="min-h-screen bg-gradient-to-b from-[#D5B8B8] via-[#E8D5D5] to-[#F5EBE8]">
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-20 min-h-screen bg-[#F5EBE8] flex flex-col items-center py-4 gap-3">
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors">
+                <span class="text-xl">👥</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Groups</span>
 
+            <a href="listeEvent.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">📅</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Event</span>
 
-    <nav class="h-10 bg-[#f3e8e8] border-b border-gray-300 flex items-center justify-between px-4 shrink-0">
-        <div class="flex items-center gap-4">
-            <div class="flex gap-3 text-gray-400 text-sm">
-                <i class="fa-solid fa-arrow-left cursor-pointer hover:text-gray-600"></i>
-                <i class="fa-solid fa-arrow-right opacity-30"></i>
-                <i class="fa-solid fa-rotate-right cursor-pointer hover:text-gray-600"></i>
-            </div>
-            <div class="bg-white border border-gray-300 rounded-full px-3 py-0.5 text-[11px] text-gray-500 w-[400px]">
-                www.UniConnect.com/signin_in
-            </div>
-        </div>
-        <div class="flex items-center gap-3">
-            <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
-            <div class="w-7 h-7 bg-gray-200 border border-gray-300 rounded-full flex items-center justify-center text-[11px] font-bold text-gray-600">
-                M
-            </div>
-            <i class="fa-solid fa-ellipsis-vertical text-gray-400 text-xs cursor-pointer"></i>
-        </div>
-    </nav>
-    <div class="flex flex-1 overflow-hidden">
-        
-        <aside class="w-20 bg-[#f3e8e8] border-r border-gray-300 flex flex-col items-center py-4 space-y-6 shrink-0">
-            <div class="flex flex-col items-center text-[10px] text-gray-500">
-                <div class="w-10 h-10 bg-blue-200 rounded flex items-center justify-center mb-1">
-                    <i class="fa-solid fa-users text-blue-600"></i>
-                </div>
-                Groups
-            </div>
-            <div class="flex flex-col items-center text-[10px] text-gray-500">
-                <div class="w-10 h-10 bg-pink-100 rounded flex items-center justify-center mb-1">
-                    <i class="fa-solid fa-calendar-days text-red-400"></i>
-                </div>
-                event
-            </div>
-            <div class="flex flex-col items-center text-[10px] text-gray-500">
-                <div class="w-10 h-10 bg-gray-200 rounded flex items-center justify-center mb-1">
-                    <i class="fa-solid fa-briefcase text-gray-600"></i>
-                </div>
-                Offres
-            </div>
-            <div class="flex flex-col items-center text-[10px]">
-                <div class="w-12 h-10 bg-[#c48b7a] rounded flex items-center justify-center mb-1 shadow-md">
-                    <i class="fa-solid fa-car-side text-white"></i>
-                </div>
-                <span class="text-[#c48b7a] font-bold">Covoiturage</span>
-            </div>
-            
-            <div class="mt-auto pb-4">
-                <button class="bg-black text-white text-xs py-1 px-3 rounded">log out</button>
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">📁</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Portfolio</span>
+
+            <a href="offers.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">💼</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Offers</span>
+
+            <a href="#" class="w-12 h-12 bg-[#B66C5A] rounded-xl flex items-center justify-center mt-2">
+                <span class="text-xl">🤝</span>
+            </a>
+            <span class="text-xs text-[#B66C5A] font-medium">Covoiturage</span>
+
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">📚</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Resources</span>
+
+            <div class="mt-auto mb-4">
+                <button class="px-4 py-2 bg-[#B66C5A] text-white text-xs rounded-lg hover:bg-[#9A5A4A] transition-colors">
+                    Log out
+                </button>
             </div>
         </aside>
 
-        <main class="flex-1 p-10 overflow-y-auto">
+        <!-- Main Content -->
+        <main class="flex-1 p-10">
             <h1 class="text-3xl font-bold text-gray-800 mb-8">Ajout d'un trajet</h1>
 
-            <div class="max-w-4xl mx-auto mt-5">
+            <div class="max-w-4xl mx-auto">
                 <div class="bg-[#dcc6c6] rounded-[40px] p-16 shadow-inner flex flex-col items-center min-h-[500px]">
                     <h2 class="text-3xl font-bold text-gray-800 mb-12">Cherchez un trajet</h2>
 
@@ -73,13 +59,13 @@
                         <div class="relative">
                             <input type="text" value="Esprit" 
                                 class="w-full p-3 rounded-md border-2 border-[#7c5fa2] focus:outline-none bg-white text-gray-700">
-                            <span class="absolute right-3 top-3 text-gray-400"><i class="fa-solid fa-circle-xmark"></i></span>
+                            <span class="absolute right-3 top-3 text-gray-400 cursor-pointer">✕</span>
                         </div>
 
                         <div class="relative">
                             <input type="text" value="Manzeh" 
                                 class="w-full p-3 rounded-t-md border-2 border-[#7c5fa2] focus:outline-none bg-white text-gray-700">
-                            <span class="absolute right-3 top-3 text-gray-400"><i class="fa-solid fa-circle-xmark"></i></span>
+                            <span class="absolute right-3 top-3 text-gray-400 cursor-pointer">✕</span>
                             
                             <ul class="absolute w-full bg-[#f3e8e8] border-x-2 border-b-2 border-[#7c5fa2] rounded-b-md shadow-lg z-10">
                                 <li class="p-3 hover:bg-gray-200 cursor-pointer text-sm text-gray-600 border-b border-gray-200">Manzeh 5</li>
@@ -91,7 +77,7 @@
                     </div>
 
                     <div class="w-full max-w-md flex justify-end mt-24">
-                        <button class="bg-[#bc7b68] text-white px-10 py-2 rounded-lg shadow-md hover:bg-[#a66a59] transition">
+                        <button class="bg-[#B66C5A] text-white px-10 py-2 rounded-lg shadow-md hover:bg-[#9A5A4A] transition">
                             Cherchez
                         </button>
                     </div>
@@ -99,6 +85,5 @@
             </div>
         </main>
     </div>
-
 </body>
 </html>
