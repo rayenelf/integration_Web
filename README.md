@@ -28,7 +28,60 @@
 
 ---
 
-## ️ Technologies Utilisées
+## 📸 Captures d'Écran
+
+### 🏠 Pages Principales
+| Interface | Capture |
+|-----------|---------|
+| Welcome Page | ![Welcome Page](Event/images/welcome_page.png) |
+| Login | ![Login](Event/images/login.png) |
+| Home | ![Home](Event/images/home.png) |
+
+### 👥 Groupes d'Étude
+| Interface | Capture |
+|-----------|---------|
+| Liste des Groupes | ![Liste Groupes](Event/images/liste-groupe.png) |
+| Créer un Groupe | ![Créer Groupe](Event/images/create-group.png) |
+| Détail du Groupe | ![Détail Groupe](Event/images/group-detail.png) |
+| Discussion de Groupe | ![Discussion](Event/images/group-discussion.png) |
+
+### 📅 Événements
+| Interface | Capture |
+|-----------|---------|
+| Liste des Événements | ![Liste Events](Event/images/listeEvent.png) |
+| Ajouter Événement (IA) | ![Add AI](Event/images/AddAi.png) |
+| Ajouter Événement (Manuel) | ![Add Manual](Event/images/AddMn.png) |
+| Paiement | ![Paiement](Event/images/Paiement.png) |
+
+### 📁 Portfolios
+| Interface | Capture |
+|-----------|---------|
+| Liste des Portfolios | ![Portfolios](Event/images/portfolios.png) |
+| Détails Portfolio | ![Détails](Event/images/details.png) |
+
+### 💼 Offres
+| Interface | Capture |
+|-----------|---------|
+| Liste des Offres | ![Offres](Event/images/offers.png) |
+
+### 🤝 Covoiturage
+| Interface | Capture |
+|-----------|---------|
+| Chercher Covoiturage | ![Chercher](Event/images/ChercherCovoiturage.png) |
+| Liste des Trajets | ![Trajets](Event/images/ListeTrajet.png) |
+| Profil du Chauffeur | ![Profil Chauffeur](Event/images/ProfileDeChauffeur.png) |
+| Avis Clients | ![Avis](Event/images/AvisClient.png) |
+
+### 📚 Ressources
+| Interface | Capture |
+|-----------|---------|
+| Liste des Ressources | ![Ressources](Event/images/resources.png) |
+| Catégorie Ressources | ![Catégorie](Event/images/resources-category.png) |
+| Ajouter Ressource | ![Ajouter](Event/images/add-resources.png) |
+
+---
+
+## 🛠️ Technologies Utilisées
 
 ### Front-End
 | Technologie | Description |
