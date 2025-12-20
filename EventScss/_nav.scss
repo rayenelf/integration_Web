@@ -3,14 +3,18 @@
 
 /* NAV-BAR À GAUCHE */
 .sidebar {
-  width: 150px;
+  width: 80px;
   height: 100vh;
-  background-color: #E8D5D5;
+  background-color: #EBCDC3;
   color: white;
-  padding: 1px;
+  padding: 10px 0;
   position: fixed; /* elle reste collée à gauche */
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* TITRE DU MENU */
@@ -23,58 +27,107 @@
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  padding-top: 20px;
 }
 
 .sidebar ul li {
-  margin: 20px 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .sidebar ul li a {
-  color: white;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  font-size: 18px;
-  transition: 0.2s;
+  font-size: 11px;
+  transition: all 0.3s;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #6c4637;
+  gap: 4px;
+  padding: 8px;
 }
 
-.sidebar ul li a:hover {
-  color: #ffdd59;
-  margin-left: 5px; /* petit effet */
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #cea69a;
+  transform: scale(1.05);
 }
 
 /* CONTENU À DROITE */
 .content {
-  margin-left: 24px; /* espace pour éviter que le contenu cache la barre */
+  margin-left: 80px; /* espace pour éviter que le contenu cache la barre */
   padding: 30px;
 }
 .nn {
-    padding: 6px 12px;
+    padding: 8px 10px;
     border: 2px solid #b84c12;      /* bordure */
     border-radius: 8px;
     color: #b84c12;                 /* couleur du texte */
     transition: 0.3s;
     
-
-     width: 80px;      /* même largeur pour tous */
-    height: 25px;
+    width: 65px;      /* largeur ajustée */
+    min-height: 60px; /* hauteur minimum au lieu de fixe */
 
     display: flex;
     flex-direction: column;   /* icône en haut + texte en bas */
     align-items: center;      /* centre horizontalement */
     justify-content: center;  /* centre verticalement */
     text-align: center;       /* texte centré */
-    gap: 5px;                 /* espace entre icône et texte */
-    padding: 10px;
-
-
+    gap: 4px;                 /* espace entre icône et texte */
+    font-size: 10px;          /* taille du texte */
+    text-decoration: none;    /* pas de soulignement */
+    line-height: 1.1;         /* espacement des lignes */
 }
 
 /* Image en haut de la sidebar */
 .sidebar-logo {
     display: block;
-    width: 100px;         /* largeur de l'image */
-    height: auto;
-    margin: 10px auto;    /* centré horizontalement */
-    border-radius: 10px;  /* optionnel, coins arrondis */
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Icon styles */
+.sidebar ul li a img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Logout button */
+.logout-btn {
+    width: 55px;
+    height: 45px;
+    background-color: #6c4637;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-btn:hover {
+    background-color: #5a3829;
+    transform: scale(1.05);
 }
 
 
@@ -90,11 +143,25 @@
     border-color: #6c4637;
     color: white;
 }
+
+/* Style pour les icônes et texte dans .nn */
+.nn div:first-child {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.nn div:last-child {
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 1.1;
+    word-break: break-word;
+}
+
 .main-nav {
     display: flex;
     flex-direction: column; /* vertical */
     gap: 12px;              /* espace entre les boutons */
-    align-items: flex-start; /* ou center si tu veux centré */
+    align-items: center;    /* centre les éléments */
 }
 
 
