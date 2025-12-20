@@ -28,48 +28,7 @@
 
 ---
 
-## 📸 Captures d'Écran
-
-### Page d'Accueil
-![Welcome Page](screenshots/welcome_page.png)
-
-### Page de Connexion
-![Login Page](screenshots/login.png)
-
-### Gestion des Événements
-![Events List](screenshots/listeEvent.png)
-![Create Event AI](screenshots/AddAi.png)
-![Create Event Manual](screenshots/AddMn.png)
-
-### Groupes d'Étude
-![Groups List](screenshots/liste-groupe.png)
-![Group Detail](screenshots/group-detail.png)
-![Group Discussion](screenshots/group-discussion.png)
-
-### Portfolios
-![Portfolios](screenshots/portfolios.png)
-![Portfolio Details](screenshots/details.png)
-
-### Offres
-![Offers](screenshots/offers.png)
-
-### Covoiturage
-![Search Ride](screenshots/ChercherCovoiturage.png)
-![Rides List](screenshots/ListeTrajet.png)
-![Driver Profile](screenshots/ProfileDeChauffeur.png)
-![Reviews](screenshots/AvisClient.png)
-
-### Ressources
-![Resources](screenshots/resources.png)
-![Resources Category](screenshots/resources-category.png)
-![Add Resources](screenshots/add-resources.png)
-
-### Paiement
-![Payment](screenshots/Paiement.png)
-
----
-
-## 🛠️ Technologies Utilisées
+## ️ Technologies Utilisées
 
 ### Front-End
 | Technologie | Description |
