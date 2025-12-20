@@ -20,11 +20,11 @@
 
 | Membre | Rôle | Pages Développées |
 |--------|------|-------------------|
-| **Oussema Ben Elhaj (welcome_page,login,portfolios,details,offers,home)** 
-| **Rayen Elfidha  (liste-groupe , create-group , group-discussion , group-detail)
-| **Ahmed Kalboussi (resouurce , add-ressource , ressource-categorie)
-| **Yasmine Abedel Ali (avis-client , cherhcer-covoiturage , liste-trajet , profil-chauffeur)
-| ** oussema saidani (add-eventwithAi ,add-event-manuelle,liste-event_payement) 
+| **Oussema Ben Elhaj** | Développeur | welcome_page, login, portfolios, details, offers, home |
+| **Rayen Elfidha** | Développeur | liste-groupe, create-group, group-discussion, group-detail |
+| **Ahmed Kalboussi** | Développeur | resources, add-resources, resources-category |
+| **Yasmine Abedel Ali** | Développeur | AvisClient, ChercherCovoiturage, ListeTrajet, ProfileDeChauffeur |
+| **Oussema Saidani** | Développeur | AddAi, AddMn, listeEvent, Paiement |
 
 ---
 
