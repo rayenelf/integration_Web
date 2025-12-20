@@ -2,5 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom tweaks (optional) */
-/* .card { @apply rounded-lg border bg-white p-4 shadow-sm; } */
+/* Custom styles */
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-[#B66C5A] text-white rounded-lg hover:bg-[#9A5A4A] transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-[#4A3A3A] text-white rounded-lg hover:bg-[#3A2A2A] transition-colors;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl p-4 shadow-sm;
+  }
+  
+  .sidebar-link {
+    @apply w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors;
+  }
+  
+  .sidebar-link-active {
+    @apply w-12 h-12 bg-[#B66C5A] rounded-xl flex items-center justify-center;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B66C5A];
+  }
+  
+  .user-profile {
+    @apply flex items-center gap-2 bg-white rounded-full px-3 py-2;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .bg-gradient-main {
+    @apply bg-gradient-to-b from-[#D5B8B8] via-[#E8D5D5] to-[#F5EBE8];
+  }
+}
