@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers - UniConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-[#D5B8B8] via-[#E8D5D5] to-[#F5EBE8]">
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-20 min-h-screen bg-[#F5EBE8] flex flex-col items-center py-4 gap-3">
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors">
+                <span class="text-xl">👥</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Groups</span>
+
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">📅</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Event</span>
+
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">📁</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Portfolio</span>
+
+            <a href="#" class="w-12 h-12 bg-[#B66C5A] rounded-xl flex items-center justify-center mt-2">
+                <span class="text-xl">💼</span>
+            </a>
+            <span class="text-xs text-[#B66C5A] font-medium">Offers</span>
+
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">🤝</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Covoiturage</span>
+
+            <a href="#" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2">
+                <span class="text-xl">📚</span>
+            </a>
+            <span class="text-xs text-[#5A4A4A]">Resources</span>
+
+            <div class="mt-auto mb-4">
+                <button class="px-4 py-2 bg-[#B66C5A] text-white text-xs rounded-lg hover:bg-[#9A5A4A] transition-colors">
+                    Log out
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6">
+                <button class="w-8 h-8 bg-white rounded-lg flex items-center justify-center hover:bg-gray-100">
+                    <span>←</span>
+                </button>
+                <h1 class="text-xl font-semibold text-gray-900">offers</h1>
+                <div class="flex items-center gap-3">
+                    <span class="text-xl">🔔</span>
+                    <div class="flex items-center gap-2 bg-white rounded-full px-3 py-2">
+                        <div class="w-8 h-8 bg-[#B66C5A] rounded-full flex items-center justify-center text-white text-xs font-medium">OB</div>
+                        <span class="text-sm text-[#5A4A4A] font-medium">oussema<br>benelhaj</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="mb-6 max-w-2xl mx-auto">
+                <input type="text" placeholder="effectuez une recherche..." class="w-full px-4 py-3 bg-white border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-[#B66C5A]">
+            </div>
+
+            <!-- Offers List -->
+            <div class="space-y-4">
+                <!-- Offer 1 -->
+                <div class="bg-white rounded-2xl p-4 shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="w-16 h-16 bg-[#F5EBE8] rounded-xl flex items-center justify-center">
+                            <span class="text-4xl">🖼️</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs text-gray-500 uppercase">SUBJECT: JOIN TO PROJECT TEAM</p>
+                            <h3 class="font-semibold text-gray-900">Join Our Development Team</h3>
+                            <p class="text-sm text-gray-600">description: we have project to regular do you wanna be in our team</p>
+                            <div class="flex items-center gap-2 mt-3">
+                                <button class="w-8 h-8 bg-[#F5EBE8] rounded-lg flex items-center justify-center text-[#5A4A4A] hover:bg-[#E8D5D5]">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-8 h-8 bg-[#F5EBE8] rounded-lg flex items-center justify-center text-[#5A4A4A] hover:bg-[#E8D5D5]">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                                    </svg>
+                                </button>
+                                <button class="px-4 py-2 bg-[#4A3A3A] text-white text-xs rounded-lg hover:bg-[#3A2A2A]">see more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="bg-white rounded-2xl p-4 shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="w-16 h-16 bg-[#F5EBE8] rounded-xl flex items-center justify-center">
+                            <span class="text-4xl">🖼️</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs text-gray-500 uppercase">SUBJECT: JOIN TO PROJECT UX DESIGNE TEAM</p>
+                            <h3 class="font-semibold text-gray-900">UX Designer Wanted</h3>
+                            <p class="text-sm text-gray-600">description: we see the you have skills in UX Designe do you wanna be in our team</p>
+                            <div class="flex items-center gap-2 mt-3">
+                                <button class="w-8 h-8 bg-[#F5EBE8] rounded-lg flex items-center justify-center text-[#5A4A4A] hover:bg-[#E8D5D5]">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-8 h-8 bg-[#F5EBE8] rounded-lg flex items-center justify-center text-[#5A4A4A] hover:bg-[#E8D5D5]">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                                    </svg>
+                                </button>
+                                <button class="px-4 py-2 bg-[#4A3A3A] text-white text-xs rounded-lg hover:bg-[#3A2A2A]">see more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer 3 -->
+                <div class="bg-white rounded-2xl p-4 shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="w-16 h-16 bg-[#F5EBE8] rounded-xl flex items-center justify-center">
+                            <span class="text-4xl">🖼️</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs text-gray-500 uppercase">SUBJECT: JOIN TO PROJECT ANGULAR TEAM</p>
+                            <h3 class="font-semibold text-gray-900">angular Wanted</h3>
+                            <p class="text-sm text-gray-600">description: we see the you have skills in angular do you wanna be in our team</p>
+                            <div class="flex items-center gap-2 mt-3">
+                                <button class="w-8 h-8 bg-[#F5EBE8] rounded-lg flex items-center justify-center text-[#5A4A4A] hover:bg-[#E8D5D5]">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-8 h-8 bg-[#F5EBE8] rounded-lg flex items-center justify-center text-[#5A4A4A] hover:bg-[#E8D5D5]">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                                    </svg>
+                                </button>
+                                <button class="px-4 py-2 bg-[#4A3A3A] text-white text-xs rounded-lg hover:bg-[#3A2A2A]">see more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex items-center justify-center gap-2 mt-8">
+                <button class="w-8 h-8 bg-white rounded-lg flex items-center justify-center hover:bg-gray-100">←</button>
+                <button class="w-8 h-8 bg-[#B66C5A] text-white rounded-lg">1</button>
+                <button class="w-8 h-8 bg-white rounded-lg hover:bg-gray-100">2</button>
+                <button class="w-8 h-8 bg-white rounded-lg hover:bg-gray-100">3</button>
+                <button class="w-8 h-8 bg-white rounded-lg hover:bg-gray-100">4</button>
+                <span class="text-gray-500">.....</span>
+                <button class="w-8 h-8 bg-white rounded-lg hover:bg-gray-100">50</button>
+                <button class="w-8 h-8 bg-white rounded-lg flex items-center justify-center hover:bg-gray-100">→</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
