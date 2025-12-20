@@ -6,51 +6,53 @@
   <title>Group discussion</title>
 
   <!-- Tailwind CSS -->
-  <link href="css/tailwind.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="m-0 font-sans bg-[#f5e1e1]">
+<body class="min-h-screen bg-gradient-to-b from-[#D5B8B8] via-[#E8D5D5] to-[#F5EBE8]">
 
 <!-- SIDEBAR -->
-<aside class="
-  fixed top-0 left-0 h-screen w-[180px]
-  bg-[#f0dede] pt-5
-  flex flex-col
-  max-[900px]:static
-  max-[900px]:w-full
-  max-[900px]:h-auto
-  max-[900px]:flex-row
-  max-[900px]:items-center
-">
+<aside class="w-20 min-h-screen bg-[#F5EBE8] flex flex-col items-center py-4 gap-3 fixed left-0 top-0 z-50" aria-label="Navigation principale" role="navigation">
+    <a href="liste-groupe.html" class="w-12 h-12 bg-[#B66C5A] rounded-xl flex items-center justify-center mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Groups" aria-current="page">
+        <span class="text-xl" aria-hidden="true">👥</span>
+    </a>
+    <span class="text-xs text-[#B66C5A] font-medium" aria-hidden="true">Groups</span>
 
-  <img src="Logo.png" alt="Logo"
-    class="w-[120px] mx-auto mb-8 max-[900px]:w-[60px] max-[900px]:m-0 max-[900px]:ml-3">
+    <a href="listeEvent.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Event">
+        <span class="text-xl" aria-hidden="true">📅</span>
+    </a>
+    <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Event</span>
 
-  <nav class="flex flex-col gap-4 px-3 max-[900px]:flex-row max-[600px]:flex-col">
-    <a href="liste-groupe.html" class="flex gap-2 p-3 rounded-xl bg-[#7a4a3c] text-white">
-      <span>👥</span><span>Groups</span>
+    <a href="portfolios.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Portfolio">
+        <span class="text-xl" aria-hidden="true">📁</span>
     </a>
-    <a class="flex gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">
-      📅 Event
+    <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Portfolio</span>
+
+    <a href="offers.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Offers">
+        <span class="text-xl" aria-hidden="true">💼</span>
     </a>
-    <a class="flex gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">
-      📁 Portfolio
+    <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Offers</span>
+
+    <a href="ChercherCovoiturage.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Covoiturage">
+        <span class="text-xl" aria-hidden="true">🤝</span>
     </a>
-    <a class="flex gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">
-      💼 Offre
+    <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Covoiturage</span>
+
+    <a href="resources.html" class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-[#E8D5D5] transition-colors mt-2 focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Resources">
+        <span class="text-xl" aria-hidden="true">📚</span>
     </a>
-    <a class="flex gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">
-      🤝 Covoiturage
-    </a>
-    <a class="flex gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">
-      📚 Ressources
-    </a>
-  </nav>
+    <span class="text-xs text-[#5A4A4A]" aria-hidden="true">Resources</span>
+
+    <div class="mt-auto mb-4">
+        <a href="welcome_page.html" class="px-4 py-2 bg-[#B66C5A] text-white text-xs rounded-lg hover:bg-[#9A5A4A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#B66C5A] focus:ring-offset-2" aria-label="Se déconnecter">
+            Log out
+        </a>
+    </div>
 </aside>
 
 <!-- HEADER -->
 <header class="
-  fixed top-0 left-[180px] right-0
+  fixed top-0 left-20 right-0
   px-10 py-6
   flex justify-between items-center
   max-[900px]:static
@@ -68,15 +70,17 @@
   </div>
 
   <div class="flex items-center gap-3">
-    <span class="text-xl text-[#b88c2a]">🔔</span>
-    <div class="w-8 h-8 rounded-full bg-[#c97c6b] text-white flex items-center justify-center font-bold">OB</div>
-    <strong class="text-[#232323]">oussem benhaj</strong>
+    <span class="text-xl">🔔</span>
+    <div class="flex items-center gap-2 bg-white rounded-full px-3 py-2">
+      <div class="w-8 h-8 bg-[#B66C5A] rounded-full flex items-center justify-center text-white text-xs font-medium">OB</div>
+      <span class="text-sm text-[#5A4A4A] font-medium">oussema<br>benelhaj</span>
+    </div>
   </div>
 </header>
 
 <!-- MAIN -->
 <main class="
-  ml-[180px]
+  ml-20
   pt-[120px] px-8 pb-8
   max-[900px]:ml-0
   max-[900px]:pt-[80px]
