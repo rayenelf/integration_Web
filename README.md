@@ -21,10 +21,10 @@
 | Membre | Rôle | Pages Développées |
 |--------|------|-------------------|
 | **Oussema Ben Elhaj (welcome_page,login,portfolios,details,offers,home)** 
-| **Rayen Elfidha** 
-| **Ahmed Kalboussi** 
-| **Yasmine Abedel Ali** 
-| ** oussema saidani ** 
+| **Rayen Elfidha  (liste-groupe , create-group , group-discussion , group-detail)
+| **Ahmed Kalboussi (resouurce , add-ressource , ressource-categorie)
+| **Yasmine Abedel Ali (avis-client , cherhcer-covoiturage , liste-trajet , profil-chauffeur)
+| ** oussema saidani (add-eventwithAi ,add-event-manuelle,liste-event_payement) 
 
 ---
 
