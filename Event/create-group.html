@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Créer un groupe</title>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0 font-sans bg-gradient-to-b from-[#f5e1e1] to-[#e9cccc]">
+
+<!-- SIDEBAR -->
+<aside class="
+  fixed top-0 left-0
+  h-screen w-[180px]
+  bg-[#f0dede]
+  pt-5
+  flex flex-col
+  max-[900px]:static
+  max-[900px]:w-full
+  max-[900px]:h-auto
+  max-[900px]:flex-row
+  max-[900px]:items-center
+">
+
+  <img src="Logo.png" alt="Logo"
+    class="w-[120px] mx-auto mb-8
+           max-[900px]:w-[60px]
+           max-[900px]:m-0 max-[900px]:ml-3">
+
+  <nav class="flex flex-col gap-4 px-3 max-[900px]:flex-row max-[600px]:flex-col">
+    <a href="liste-groupe.html"
+       class="flex items-center gap-2 p-3 rounded-xl bg-[#7a4a3c] text-white">
+      👥 Groups
+    </a>
+    <a class="flex items-center gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">📅 Event</a>
+    <a class="flex items-center gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">📁 Portfolio</a>
+    <a class="flex items-center gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">💼 Offre</a>
+    <a class="flex items-center gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">🤝 Covoiturage</a>
+    <a class="flex items-center gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">📚 Ressources</a>
+  </nav>
+</aside>
+
+<!-- HEADER -->
+<header class="
+  fixed top-0 left-[180px] right-0
+  px-10 py-6
+  flex justify-between items-center
+  max-[900px]:static
+  max-[900px]:flex-col
+  max-[900px]:items-start
+  max-[900px]:gap-3
+">
+
+  <div class="flex items-center gap-4">
+    <a href="liste-groupe.html"
+       class="bg-white px-4 py-2 rounded-xl shadow font-bold">←</a>
+
+    <!-- Breadcrumb -->
+    <span class="text-xl font-semibold text-[#232323]">groups</span>
+    <span class="text-[#6f5e5f] font-medium">/ Create group</span>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <span class="text-xl text-[#b88c2a]">🔔</span>
+    <div class="w-8 h-8 rounded-full bg-[#c97c6b] text-white flex items-center justify-center font-bold">
+      OB
+    </div>
+    <strong class="text-[#232323]">oussem benhaj</strong>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="
+  ml-[180px]
+  pt-[120px]
+  px-6
+  min-h-[70vh]
+  flex justify-center items-center
+  max-[900px]:ml-0
+  max-[900px]:pt-[80px]
+">
+
+  <!-- FORM -->
+  <form class="
+    bg-white/70
+    backdrop-blur
+    rounded-3xl
+    shadow-xl
+    p-10
+    w-full
+    max-w-[560px]
+    flex flex-col
+    gap-5
+  ">
+
+    <!-- Classe -->
+    <div class="flex flex-col gap-1">
+      <label for="classe" class="font-semibold text-[#2f2324]">Classe</label>
+      <input
+        id="classe"
+        name="classe"
+        type="text"
+        placeholder="ex: 3A1"
+        class="px-4 py-3 rounded-xl border border-black/10 outline-none focus:ring-2 focus:ring-[#7a4a3c]"
+      >
+    </div>
+
+    <!-- Matière -->
+    <div class="flex flex-col gap-1">
+      <label for="matiere" class="font-semibold text-[#2f2324]">Matière</label>
+      <input
+        id="matiere"
+        name="matiere"
+        type="text"
+        placeholder="ex: TLA"
+        class="px-4 py-3 rounded-xl border border-black/10 outline-none focus:ring-2 focus:ring-[#7a4a3c]"
+      >
+    </div>
+
+    <!-- Level -->
+    <div class="flex flex-col gap-1">
+      <label for="level" class="font-semibold text-[#2f2324]">Level</label>
+      <input
+        id="level"
+        name="level"
+        type="text"
+        placeholder="ex: Medium"
+        class="px-4 py-3 rounded-xl border border-black/10 outline-none focus:ring-2 focus:ring-[#7a4a3c]"
+      >
+    </div>
+
+    <!-- Submit -->
+    <div class="flex justify-center mt-4">
+      <a href="liste-groupe.html"
+         class="bg-[#232323] text-white px-8 py-3 rounded-xl font-medium shadow hover:opacity-95">
+        Create
+      </a>
+    </div>
+
+  </form>
+</main>
+
+</body>
+</html>

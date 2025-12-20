@@ -1,0 +1,14 @@
+.breadcrumb {
+  font-family: inherit; /* même police */
+  color: #6f5e5f;
+}
+
+.breadcrumb-main {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.breadcrumb-sub {
+  font-size: 1em;
+  font-weight: 400;
+}

@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom tweaks (optional) */
+/* .card { @apply rounded-lg border bg-white p-4 shadow-sm; } */

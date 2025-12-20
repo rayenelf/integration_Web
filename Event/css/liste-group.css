@@ -1,0 +1,263 @@
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+    background: #f0dede;
+    margin-bottom: 12px;
+  }
+  .sidebar-logo {
+    width: 60px;
+    margin: 0 12px 0 0;
+  }
+  .main-nav {
+    flex-direction: row;
+    gap: 8px;
+    padding: 0;
+  }
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 0.95em;
+  }
+  .header {
+    position: static;
+    padding: 16px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .main {
+    margin-left: 0;
+    padding: 80px 12px 24px;
+  }
+  .cards {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 90vw;
+    max-width: 320px;
+    padding: 18px;
+  }
+  .top-actions {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .search-box {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+  }
+  .sidebar-logo {
+    width: 40px;
+    margin: 0 0 8px 8px;
+  }
+  .main-nav {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .nav-link {
+    padding: 6px 8px;
+    font-size: 0.9em;
+  }
+  .header {
+    padding: 10px 6px;
+    font-size: 0.95em;
+  }
+  .main {
+    padding: 60px 4px 12px;
+  }
+  .cards {
+    gap: 10px;
+  }
+  .card {
+    width: 98vw;
+    max-width: 98vw;
+    padding: 10px;
+  }
+  .search-box {
+    padding: 6px 8px;
+    font-size: 0.95em;
+  }
+}
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #f5e1e1, #e9cccc);
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100vh;
+  background: #f0dede;
+  padding-top: 20px;
+}
+
+.sidebar-logo {
+  width: 120px;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 12px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+}
+
+.nav-link.active {
+  background: #7a4a3c;
+  color: #fff;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 180px;
+  right: 0;
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.back-btn {
+  background: white;
+  padding: 8px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 0 2px 8px #d8bcbc;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  background: #c97c6b;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ===== MAIN ===== */
+.main {
+  margin-left: 180px;
+  padding: 120px 48px 48px;
+}
+
+/* SEARCH + CREATE */
+.top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #d6b6b6;
+  padding: 10px 24px;
+  border-radius: 20px;
+  width: 60%;
+  max-width: 700px;
+  box-shadow: 0 2px 8px #d8bcbc;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 1.1em;
+  outline: none;
+}
+
+.create-btn {
+  background: #232323;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+/* ===== CARDS ===== */
+.cards {
+  margin-top: 48px;
+  display: flex;
+  gap: 48px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #d8bcbc;
+  padding: 32px;
+  width: 240px;
+  text-align: center;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  margin: 8px 0;
+  color: #6d4c41;
+}
+
+.card p {
+  margin: 4px 0;
+  color: #6d4c41;
+}

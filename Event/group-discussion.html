@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Group discussion</title>
+
+  <!-- Tailwind CSS -->
+  <link href="css/tailwind.css" rel="stylesheet">
+</head>
+
+<body class="m-0 font-sans bg-[#f5e1e1]">
+
+<!-- SIDEBAR -->
+<aside class="
+  fixed top-0 left-0 h-screen w-[180px]
+  bg-[#f0dede] pt-5
+  flex flex-col
+  max-[900px]:static
+  max-[900px]:w-full
+  max-[900px]:h-auto
+  max-[900px]:flex-row
+  max-[900px]:items-center
+">
+
+  <img src="Logo.png" alt="Logo"
+    class="w-[120px] mx-auto mb-8 max-[900px]:w-[60px] max-[900px]:m-0 max-[900px]:ml-3">
+
+  <nav class="flex flex-col gap-4 px-3 max-[900px]:flex-row max-[600px]:flex-col">
+    <a href="liste-groupe.html" class="flex gap-2 p-3 rounded-xl bg-[#7a4a3c] text-white">
+      <span>👥</span><span>Groups</span>
+    </a>
+    <a class="flex gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">
+      📅 Event
+    </a>
+    <a class="flex gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">
+      📁 Portfolio
+    </a>
+    <a class="flex gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">
+      💼 Offre
+    </a>
+    <a class="flex gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">
+      🤝 Covoiturage
+    </a>
+    <a class="flex gap-2 p-3 rounded-xl bg-white hover:bg-[#7a4a3c] hover:text-white">
+      📚 Ressources
+    </a>
+  </nav>
+</aside>
+
+<!-- HEADER -->
+<header class="
+  fixed top-0 left-[180px] right-0
+  px-10 py-6
+  flex justify-between items-center
+  max-[900px]:static
+  max-[900px]:flex-col
+  max-[900px]:items-start
+  max-[900px]:gap-3
+">
+
+  <div class="flex items-center gap-4">
+    <a href="liste-groupe.html"
+       class="bg-white px-4 py-2 rounded-xl shadow font-bold">←</a>
+
+    <span class="text-xl font-bold text-[#232323]">groups</span>
+    <span class="text-[#6f5e5f]">/ group discussion</span>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <span class="text-xl text-[#b88c2a]">🔔</span>
+    <div class="w-8 h-8 rounded-full bg-[#c97c6b] text-white flex items-center justify-center font-bold">OB</div>
+    <strong class="text-[#232323]">oussem benhaj</strong>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="
+  ml-[180px]
+  pt-[120px] px-8 pb-8
+  max-[900px]:ml-0
+  max-[900px]:pt-[80px]
+">
+
+  <div class="flex gap-6 min-h-[70vh] max-[1000px]:flex-col">
+
+    <!-- CONVERSATIONS -->
+    <aside class="
+      w-[220px]
+      bg-[#f0dede]
+      rounded-2xl
+      p-4
+      flex flex-col gap-2
+      max-[1000px]:w-full
+    ">
+      <h4 class="text-[#6d4c41] font-medium mb-3">Conversations</h4>
+
+      <div class="flex flex-col gap-2">
+        <!-- Conversation -->
+        <div class="flex gap-3 items-center bg-white p-3 rounded-xl cursor-pointer">
+          <img src="https://ui-avatars.com/api/?name=Name"
+               class="w-8 h-8 rounded-full bg-[#e9cccc]">
+          <div>
+            <div class="font-medium">Name</div>
+            <div class="text-sm text-[#6d4c41]">Supporting line...</div>
+            <div class="text-xs text-[#b88c2a]">10 min</div>
+          </div>
+        </div>
+
+        <div class="flex gap-3 items-center bg-white p-3 rounded-xl cursor-pointer">
+          <img src="https://ui-avatars.com/api/?name=Name"
+               class="w-8 h-8 rounded-full bg-[#e9cccc]">
+          <div>
+            <div class="font-medium">Name</div>
+            <div class="text-sm text-[#6d4c41]">Supporting line...</div>
+            <div class="text-xs text-[#b88c2a]">10 min</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CHAT -->
+    <section class="
+      flex-1
+      bg-[#d6b6b6]
+      rounded-3xl
+      p-6
+      flex flex-col
+      gap-4
+      shadow-xl
+    ">
+      <h3 class="text-lg font-medium">error symphony</h3>
+
+      <!-- Messages -->
+      <div class="flex-1 flex flex-col gap-3">
+
+        <!-- Left -->
+        <div class="flex items-end gap-2">
+          <img src="https://ui-avatars.com/api/?name=User"
+               class="w-7 h-7 rounded-full bg-[#e9cccc]">
+          <div class="bg-white px-4 py-2 rounded-2xl rounded-bl-sm max-w-[340px]">
+            oh this problem is caused by...
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="flex justify-end gap-2">
+          <div class="bg-[#232323] text-white px-4 py-2 rounded-2xl rounded-br-sm max-w-[340px]">
+            this the error what is the solution?
+          </div>
+
+          <div class="bg-white p-3 rounded-xl min-w-[120px] text-center">
+            <div class="w-12 h-12 bg-[#e9cccc] rounded-lg mx-auto mb-2"></div>
+            <div class="text-sm">error 23dndndn<br>dndnkdndn</div>
+          </div>
+        </div>
+
+        <!-- Right simple -->
+        <div class="flex justify-end">
+          <div class="bg-[#232323] text-white px-4 py-2 rounded-2xl rounded-br-sm">
+            Great!
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Input -->
+      <form class="flex items-center gap-3 mt-4">
+        <button type="button" class="text-xl">😊</button>
+        <button type="button" class="text-xl">➕</button>
+
+        <input type="text" placeholder="Type a message..."
+          class="flex-1 px-4 py-2 rounded-full bg-[#f5e1e1] outline-none">
+
+        <button type="submit" class="text-xl">🔍</button>
+      </form>
+    </section>
+
+  </div>
+</main>
+
+</body>
+</html>
